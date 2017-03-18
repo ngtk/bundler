@@ -1,0 +1,3678 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Bundler
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Bundler";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (B)</a> &raquo;
+    
+    
+    <span class="title">Bundler</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="class_list.html"></iframe>
+
+      <div id="content"><h1>Module: Bundler
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bundler/version.rb<span class="defines">,<br />
+  lib/bundler.rb,<br /> lib/bundler/ui.rb,<br /> lib/bundler/env.rb,<br /> lib/bundler/cli.rb,<br /> lib/bundler/dsl.rb,<br /> lib/bundler/graph.rb,<br /> lib/bundler/index.rb,<br /> lib/bundler/retry.rb,<br /> lib/bundler/worker.rb,<br /> lib/bundler/source.rb,<br /> lib/bundler/plugin.rb,<br /> lib/bundler/mirror.rb,<br /> lib/bundler/errors.rb,<br /> lib/bundler/gemdeps.rb,<br /> lib/bundler/fetcher.rb,<br /> lib/bundler/cli/viz.rb,<br /> lib/bundler/cli/gem.rb,<br /> lib/bundler/runtime.rb,<br /> lib/bundler/cli/show.rb,<br /> lib/bundler/spec_set.rb,<br /> lib/bundler/cli/exec.rb,<br /> lib/bundler/cli/info.rb,<br /> lib/bundler/cli/init.rb,<br /> lib/bundler/cli/lock.rb,<br /> lib/bundler/cli/open.rb,<br /> lib/bundler/ruby_dsl.rb,<br /> lib/bundler/resolver.rb,<br /> lib/bundler/ui/shell.rb,<br /> lib/bundler/settings.rb,<br /> lib/bundler/injector.rb,<br /> lib/bundler/deprecate.rb,<br /> lib/bundler/cli/clean.rb,<br /> lib/bundler/installer.rb,<br /> lib/bundler/constants.rb,<br /> lib/bundler/cli/check.rb,<br /> lib/bundler/dep_proxy.rb,<br /> lib/bundler/cli/cache.rb,<br /> lib/bundler/ui/silent.rb,<br /> lib/bundler/gem_helper.rb,<br /> lib/bundler/cli/common.rb,<br /> lib/bundler/cli/config.rb,<br /> lib/bundler/dependency.rb,<br /> lib/bundler/deployment.rb,<br /> lib/bundler/definition.rb,<br /> lib/bundler/cli/update.rb,<br /> lib/bundler/cli/plugin.rb,<br /> lib/bundler/source/git.rb,<br /> lib/bundler/plugin/dsl.rb,<br /> lib/bundler/cli/inject.rb,<br /> lib/bundler/plugin/api.rb,<br /> lib/bundler/cli/doctor.rb,<br /> lib/bundler/ui/rg_proxy.rb,<br /> lib/bundler/cli/console.rb,<br /> lib/bundler/cli/install.rb,<br /> lib/bundler/cli/package.rb,<br /> lib/bundler/gem_helpers.rb,<br /> lib/bundler/source_list.rb,<br /> lib/bundler/source/path.rb,<br /> lib/bundler/cli/binstubs.rb,<br /> lib/bundler/ruby_version.rb,<br /> lib/bundler/current_ruby.rb,<br /> lib/bundler/feature_flag.rb,<br /> lib/bundler/psyched_yaml.rb,<br /> lib/bundler/plugin/index.rb,<br /> lib/bundler/cli/outdated.rb,<br /> lib/bundler/fetcher/base.rb,<br /> lib/bundler/cli/platform.rb,<br /> lib/bundler/fetcher/index.rb,<br /> lib/bundler/vendored_thor.rb,<br /> lib/bundler/match_platform.rb,<br /> lib/bundler/source/gemspec.rb,<br /> lib/bundler/shared_helpers.rb,<br /> lib/bundler/yaml_serializer.rb,<br /> lib/bundler/friendly_errors.rb,<br /> lib/bundler/source/rubygems.rb,<br /> lib/bundler/lockfile_parser.rb,<br /> lib/bundler/plugin/installer.rb,<br /> lib/bundler/plugin/api/source.rb,<br /> lib/bundler/vendored_molinillo.rb,<br /> lib/bundler/lazy_specification.rb,<br /> lib/bundler/fetcher/dependency.rb,<br /> lib/bundler/stub_specification.rb,<br /> lib/bundler/plugin/source_list.rb,<br /> lib/bundler/fetcher/downloader.rb,<br /> lib/bundler/gem_remote_fetcher.rb,<br /> lib/bundler/vendored_persistent.rb,<br /> lib/bundler/similarity_detector.rb,<br /> lib/bundler/remote_specification.rb,<br /> lib/bundler/installer/standalone.rb,<br /> lib/bundler/source/git/git_proxy.rb,<br /> lib/bundler/plugin/installer/git.rb,<br /> lib/bundler/rubygems_integration.rb,<br /> lib/bundler/compact_index_client.rb,<br /> lib/bundler/gem_version_promoter.rb,<br /> lib/bundler/environment_preserver.rb,<br /> lib/bundler/source/path/installer.rb,<br /> lib/bundler/fetcher/compact_index.rb,<br /> lib/bundler/rubygems_gem_installer.rb,<br /> lib/bundler/uri_credentials_filter.rb,<br /> lib/bundler/endpoint_specification.rb,<br /> lib/bundler/source/rubygems/remote.rb,<br /> lib/bundler/installer/gem_installer.rb,<br /> lib/bundler/plugin/installer/rubygems.rb,<br /> lib/bundler/compact_index_client/cache.rb,<br /> lib/bundler/compact_index_client/updater.rb,<br /> lib/bundler/installer/parallel_installer.rb,<br /> lib/bundler/ssl_certs/certificate_manager.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Some versions of the Bundler 1.1 RC series introduced corrupted lockfiles.
+There were two major problems:</p>
+<ul><li>
+<p>multiple copies of the same GIT section appeared in the lockfile</p>
+</li><li>
+<p>when this happened, those sections got multiple copies of gems in those
+sections.</p>
+</li></ul>
+
+<p>As a result, Bundler 1.1 contains code that fixes the earlier corruption.
+We will remove this fix-up code in Bundler 1.2.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Bundler/FriendlyErrors.html" title="Bundler::FriendlyErrors (module)">FriendlyErrors</a></span>, <span class='object_link'><a href="Bundler/GemHelpers.html" title="Bundler::GemHelpers (module)">GemHelpers</a></span>, <span class='object_link'><a href="Bundler/MatchPlatform.html" title="Bundler::MatchPlatform (module)">MatchPlatform</a></span>, <span class='object_link'><a href="Bundler/Molinillo.html" title="Bundler::Molinillo (module)">Molinillo</a></span>, <span class='object_link'><a href="Bundler/Persistent.html" title="Bundler::Persistent (module)">Persistent</a></span>, <span class='object_link'><a href="Bundler/Plugin.html" title="Bundler::Plugin (module)">Plugin</a></span>, <span class='object_link'><a href="Bundler/RubyDsl.html" title="Bundler::RubyDsl (module)">RubyDsl</a></span>, <span class='object_link'><a href="Bundler/SSLCerts.html" title="Bundler::SSLCerts (module)">SSLCerts</a></span>, <span class='object_link'><a href="Bundler/SharedHelpers.html" title="Bundler::SharedHelpers (module)">SharedHelpers</a></span>, <span class='object_link'><a href="Bundler/UI.html" title="Bundler::UI (module)">UI</a></span>, <span class='object_link'><a href="Bundler/URICredentialsFilter.html" title="Bundler::URICredentialsFilter (module)">URICredentialsFilter</a></span>, <span class='object_link'><a href="Bundler/YAMLSerializer.html" title="Bundler::YAMLSerializer (module)">YAMLSerializer</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Bundler/APIResponseMismatchError.html" title="Bundler::APIResponseMismatchError (class)">APIResponseMismatchError</a></span>, <span class='object_link'><a href="Bundler/BundlerError.html" title="Bundler::BundlerError (class)">BundlerError</a></span>, <span class='object_link'><a href="Bundler/CLI.html" title="Bundler::CLI (class)">CLI</a></span>, <span class='object_link'><a href="Bundler/CompactIndexClient.html" title="Bundler::CompactIndexClient (class)">CompactIndexClient</a></span>, <span class='object_link'><a href="Bundler/CurrentRuby.html" title="Bundler::CurrentRuby (class)">CurrentRuby</a></span>, <span class='object_link'><a href="Bundler/CyclicDependencyError.html" title="Bundler::CyclicDependencyError (class)">CyclicDependencyError</a></span>, <span class='object_link'><a href="Bundler/Definition.html" title="Bundler::Definition (class)">Definition</a></span>, <span class='object_link'><a href="Bundler/DepProxy.html" title="Bundler::DepProxy (class)">DepProxy</a></span>, <span class='object_link'><a href="Bundler/Dependency.html" title="Bundler::Dependency (class)">Dependency</a></span>, <span class='object_link'><a href="Bundler/Deployment.html" title="Bundler::Deployment (class)">Deployment</a></span>, <span class='object_link'><a href="Bundler/DeprecatedError.html" title="Bundler::DeprecatedError (class)">DeprecatedError</a></span>, <span class='object_link'><a href="Bundler/Dsl.html" title="Bundler::Dsl (class)">Dsl</a></span>, <span class='object_link'><a href="Bundler/EndpointSpecification.html" title="Bundler::EndpointSpecification (class)">EndpointSpecification</a></span>, <span class='object_link'><a href="Bundler/Env.html" title="Bundler::Env (class)">Env</a></span>, <span class='object_link'><a href="Bundler/EnvironmentPreserver.html" title="Bundler::EnvironmentPreserver (class)">EnvironmentPreserver</a></span>, <span class='object_link'><a href="Bundler/FeatureFlag.html" title="Bundler::FeatureFlag (class)">FeatureFlag</a></span>, <span class='object_link'><a href="Bundler/Fetcher.html" title="Bundler::Fetcher (class)">Fetcher</a></span>, <span class='object_link'><a href="Bundler/GemHelper.html" title="Bundler::GemHelper (class)">GemHelper</a></span>, <span class='object_link'><a href="Bundler/GemInstaller.html" title="Bundler::GemInstaller (class)">GemInstaller</a></span>, <span class='object_link'><a href="Bundler/GemNotFound.html" title="Bundler::GemNotFound (class)">GemNotFound</a></span>, <span class='object_link'><a href="Bundler/GemRemoteFetcher.html" title="Bundler::GemRemoteFetcher (class)">GemRemoteFetcher</a></span>, <span class='object_link'><a href="Bundler/GemRequireError.html" title="Bundler::GemRequireError (class)">GemRequireError</a></span>, <span class='object_link'><a href="Bundler/GemVersionPromoter.html" title="Bundler::GemVersionPromoter (class)">GemVersionPromoter</a></span>, <span class='object_link'><a href="Bundler/Gemdeps.html" title="Bundler::Gemdeps (class)">Gemdeps</a></span>, <span class='object_link'><a href="Bundler/GemfileError.html" title="Bundler::GemfileError (class)">GemfileError</a></span>, <span class='object_link'><a href="Bundler/GemfileEvalError.html" title="Bundler::GemfileEvalError (class)">GemfileEvalError</a></span>, <span class='object_link'><a href="Bundler/GemfileLockNotFound.html" title="Bundler::GemfileLockNotFound (class)">GemfileLockNotFound</a></span>, <span class='object_link'><a href="Bundler/GemfileNotFound.html" title="Bundler::GemfileNotFound (class)">GemfileNotFound</a></span>, <span class='object_link'><a href="Bundler/GemspecError.html" title="Bundler::GemspecError (class)">GemspecError</a></span>, <span class='object_link'><a href="Bundler/GenericSystemCallError.html" title="Bundler::GenericSystemCallError (class)">GenericSystemCallError</a></span>, <span class='object_link'><a href="Bundler/GitError.html" title="Bundler::GitError (class)">GitError</a></span>, <span class='object_link'><a href="Bundler/Graph.html" title="Bundler::Graph (class)">Graph</a></span>, <span class='object_link'><a href="Bundler/HTTPError.html" title="Bundler::HTTPError (class)">HTTPError</a></span>, <span class='object_link'><a href="Bundler/Index.html" title="Bundler::Index (class)">Index</a></span>, <span class='object_link'><a href="Bundler/Injector.html" title="Bundler::Injector (class)">Injector</a></span>, <span class='object_link'><a href="Bundler/InstallError.html" title="Bundler::InstallError (class)">InstallError</a></span>, <span class='object_link'><a href="Bundler/InstallHookError.html" title="Bundler::InstallHookError (class)">InstallHookError</a></span>, <span class='object_link'><a href="Bundler/Installer.html" title="Bundler::Installer (class)">Installer</a></span>, <span class='object_link'><a href="Bundler/InvalidOption.html" title="Bundler::InvalidOption (class)">InvalidOption</a></span>, <span class='object_link'><a href="Bundler/LazySpecification.html" title="Bundler::LazySpecification (class)">LazySpecification</a></span>, <span class='object_link'><a href="Bundler/LockfileError.html" title="Bundler::LockfileError (class)">LockfileError</a></span>, <span class='object_link'><a href="Bundler/LockfileParser.html" title="Bundler::LockfileParser (class)">LockfileParser</a></span>, <span class='object_link'><a href="Bundler/MarshalError.html" title="Bundler::MarshalError (class)">MarshalError</a></span>, <span class='object_link'><a href="Bundler/MirrorSockets.html" title="Bundler::MirrorSockets (class)">MirrorSockets</a></span>, <span class='object_link'><a href="Bundler/NoSpaceOnDeviceError.html" title="Bundler::NoSpaceOnDeviceError (class)">NoSpaceOnDeviceError</a></span>, <span class='object_link'><a href="Bundler/OperationNotSupportedError.html" title="Bundler::OperationNotSupportedError (class)">OperationNotSupportedError</a></span>, <span class='object_link'><a href="Bundler/ParallelInstaller.html" title="Bundler::ParallelInstaller (class)">ParallelInstaller</a></span>, <span class='object_link'><a href="Bundler/PathError.html" title="Bundler::PathError (class)">PathError</a></span>, <span class='object_link'><a href="Bundler/PermissionError.html" title="Bundler::PermissionError (class)">PermissionError</a></span>, <span class='object_link'><a href="Bundler/PluginError.html" title="Bundler::PluginError (class)">PluginError</a></span>, <span class='object_link'><a href="Bundler/ProductionError.html" title="Bundler::ProductionError (class)">ProductionError</a></span>, <span class='object_link'><a href="Bundler/RemoteSpecification.html" title="Bundler::RemoteSpecification (class)">RemoteSpecification</a></span>, <span class='object_link'><a href="Bundler/Resolver.html" title="Bundler::Resolver (class)">Resolver</a></span>, <span class='object_link'><a href="Bundler/Retry.html" title="Bundler::Retry (class)">Retry</a></span>, <span class='object_link'><a href="Bundler/RubyGemsGemInstaller.html" title="Bundler::RubyGemsGemInstaller (class)">RubyGemsGemInstaller</a></span>, <span class='object_link'><a href="Bundler/RubyVersion.html" title="Bundler::RubyVersion (class)">RubyVersion</a></span>, <span class='object_link'><a href="Bundler/RubyVersionMismatch.html" title="Bundler::RubyVersionMismatch (class)">RubyVersionMismatch</a></span>, <span class='object_link'><a href="Bundler/RubygemsIntegration.html" title="Bundler::RubygemsIntegration (class)">RubygemsIntegration</a></span>, <span class='object_link'><a href="Bundler/Runtime.html" title="Bundler::Runtime (class)">Runtime</a></span>, <span class='object_link'><a href="Bundler/SecurityError.html" title="Bundler::SecurityError (class)">SecurityError</a></span>, <span class='object_link'><a href="Bundler/Settings.html" title="Bundler::Settings (class)">Settings</a></span>, <span class='object_link'><a href="Bundler/SimilarityDetector.html" title="Bundler::SimilarityDetector (class)">SimilarityDetector</a></span>, <span class='object_link'><a href="Bundler/SocketAddress.html" title="Bundler::SocketAddress (class)">SocketAddress</a></span>, <span class='object_link'><a href="Bundler/Source.html" title="Bundler::Source (class)">Source</a></span>, <span class='object_link'><a href="Bundler/SourceList.html" title="Bundler::SourceList (class)">SourceList</a></span>, <span class='object_link'><a href="Bundler/SpecSet.html" title="Bundler::SpecSet (class)">SpecSet</a></span>, <span class='object_link'><a href="Bundler/Standalone.html" title="Bundler::Standalone (class)">Standalone</a></span>, <span class='object_link'><a href="Bundler/StubSpecification.html" title="Bundler::StubSpecification (class)">StubSpecification</a></span>, <span class='object_link'><a href="Bundler/SudoNotPermittedError.html" title="Bundler::SudoNotPermittedError (class)">SudoNotPermittedError</a></span>, <span class='object_link'><a href="Bundler/TemporaryResourceError.html" title="Bundler::TemporaryResourceError (class)">TemporaryResourceError</a></span>, <span class='object_link'><a href="Bundler/Thor.html" title="Bundler::Thor (class)">Thor</a></span>, <span class='object_link'><a href="Bundler/ThreadCreationError.html" title="Bundler::ThreadCreationError (class)">ThreadCreationError</a></span>, <span class='object_link'><a href="Bundler/VersionConflict.html" title="Bundler::VersionConflict (class)">VersionConflict</a></span>, <span class='object_link'><a href="Bundler/VirtualProtocolError.html" title="Bundler::VirtualProtocolError (class)">VirtualProtocolError</a></span>, <span class='object_link'><a href="Bundler/Worker.html" title="Bundler::Worker (class)">Worker</a></span>, <span class='object_link'><a href="Bundler/YamlSyntaxError.html" title="Bundler::YamlSyntaxError (class)">YamlSyntaxError</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="ORIGINAL_ENV-constant" class="">ORIGINAL_ENV =
+        
+      </dt>
+      <dd><pre class="code"><span class='id identifier rubyid_environment_preserver'>environment_preserver</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span></pre></dd>
+    
+      <dt id="SUDO_MUTEX-constant" class="">SUDO_MUTEX =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'>Mutex</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span></pre></dd>
+    
+      <dt id="VERSION-constant" class="">VERSION =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>We&#39;re doing this because we might write tests that deal with other
+versions of bundler and we are unsure how to handle this better.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.14.6</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="Deprecate-constant" class="">Deprecate =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'>Gem</span><span class='op'>::</span><span class='const'>Deprecate</span></pre></dd>
+    
+      <dt id="WINDOWS-constant" class="">WINDOWS =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'>RbConfig</span><span class='op'>::</span><span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>host_os</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(msdos|mswin|djgpp|mingw)</span><span class='regexp_end'>/</span></span></pre></dd>
+    
+      <dt id="FREEBSD-constant" class="">FREEBSD =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'>RbConfig</span><span class='op'>::</span><span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>host_os</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>bsd</span><span class='regexp_end'>/</span></span></pre></dd>
+    
+      <dt id="NULL-constant" class="">NULL =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'>WINDOWS</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NUL</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/dev/null</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="YamlLibrarySyntaxError-constant" class="">YamlLibrarySyntaxError =
+        
+      </dt>
+      <dd><pre class="code"><span class='op'>::</span><span class='const'>Psych</span><span class='op'>::</span><span class='const'>SyntaxError</span></pre></dd>
+    
+  </dl>
+
+
+
+
+  <h2>Class Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bundle_path-class_method" title="bundle_path (class method)">.<strong>bundle_path</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns absolute path of where gems are installed on the filesystem.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#app_cache-class_method" title="app_cache (class method)">.<strong>app_cache</strong>(custom_path = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#app_config_path-class_method" title="app_config_path (class method)">.<strong>app_config_path</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bin_path-class_method" title="bin_path (class method)">.<strong>bin_path</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns absolute location of where binstubs are installed to.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cache-class_method" title="cache (class method)">.<strong>cache</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#clean_env-class_method" title="clean_env (class method)">.<strong>clean_env</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>Use `original_env` instead</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean_exec-class_method" title="clean_exec (class method)">.<strong>clean_exec</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean_system-class_method" title="clean_system (class method)">.<strong>clean_system</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_gemspec_cache-class_method" title="clear_gemspec_cache (class method)">.<strong>clear_gemspec_cache</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configure-class_method" title="configure (class method)">.<strong>configure</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current_ruby-class_method" title="current_ruby (class method)">.<strong>current_ruby</strong>  &#x21d2; CurrentRuby </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns current version of Ruby.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_bundle_dir-class_method" title="default_bundle_dir (class method)">.<strong>default_bundle_dir</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_gemfile-class_method" title="default_gemfile (class method)">.<strong>default_gemfile</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_lockfile-class_method" title="default_lockfile (class method)">.<strong>default_lockfile</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#definition-class_method" title="definition (class method)">.<strong>definition</strong>(unlock = nil)  &#x21d2; Bundler::Definition </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an instance of Bundler::Definition for given Gemfile and lockfile.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#environment-class_method" title="environment (class method)">.<strong>environment</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#feature_flag-class_method" title="feature_flag (class method)">.<strong>feature_flag</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#git_present%3F-class_method" title="git_present? (class method)">.<strong>git_present?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#home-class_method" title="home (class method)">.<strong>home</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#install_path-class_method" title="install_path (class method)">.<strong>install_path</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load-class_method" title="load (class method)">.<strong>load</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_gemspec-class_method" title="load_gemspec (class method)">.<strong>load_gemspec</strong>(file, validate = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_gemspec_uncached-class_method" title="load_gemspec_uncached (class method)">.<strong>load_gemspec_uncached</strong>(file, validate = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_marshal-class_method" title="load_marshal (class method)">.<strong>load_marshal</strong>(data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#local_platform-class_method" title="local_platform (class method)">.<strong>local_platform</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#locked_gems-class_method" title="locked_gems (class method)">.<strong>locked_gems</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mkdir_p-class_method" title="mkdir_p (class method)">.<strong>mkdir_p</strong>(path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#original_env-class_method" title="original_env (class method)">.<strong>original_env</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Environment present before Bundler was activated.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_file-class_method" title="read_file (class method)">.<strong>read_file</strong>(file)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#require-class_method" title="require (class method)">.<strong>require</strong>(*groups)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#requires_sudo%3F-class_method" title="requires_sudo? (class method)">.<strong>requires_sudo?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset%21-class_method" title="reset! (class method)">.<strong>reset!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset_paths%21-class_method" title="reset_paths! (class method)">.<strong>reset_paths!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset_rubygems%21-class_method" title="reset_rubygems! (class method)">.<strong>reset_rubygems!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rm_rf-class_method" title="rm_rf (class method)">.<strong>rm_rf</strong>(path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#root-class_method" title="root (class method)">.<strong>root</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ruby_scope-class_method" title="ruby_scope (class method)">.<strong>ruby_scope</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rubygems-class_method" title="rubygems (class method)">.<strong>rubygems</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#settings-class_method" title="settings (class method)">.<strong>settings</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup-class_method" title="setup (class method)">.<strong>setup</strong>(*groups)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#specs_path-class_method" title="specs_path (class method)">.<strong>specs_path</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sudo-class_method" title="sudo (class method)">.<strong>sudo</strong>(str)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#system_bindir-class_method" title="system_bindir (class method)">.<strong>system_bindir</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tmp-class_method" title="tmp (class method)">.<strong>tmp</strong>(name = Process.pid.to_s)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tmp_home_path-class_method" title="tmp_home_path (class method)">.<strong>tmp_home_path</strong>(login, warning)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ui-class_method" title="ui (class method)">.<strong>ui</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ui%3D-class_method" title="ui= (class method)">.<strong>ui=</strong>(ui)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_bundle_path-class_method" title="user_bundle_path (class method)">.<strong>user_bundle_path</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_cache-class_method" title="user_cache (class method)">.<strong>user_cache</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user_home-class_method" title="user_home (class method)">.<strong>user_home</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#which-class_method" title="which (class method)">.<strong>which</strong>(executable)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_clean_env-class_method" title="with_clean_env (class method)">.<strong>with_clean_env</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_friendly_errors-class_method" title="with_friendly_errors (class method)">.<strong>with_friendly_errors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_original_env-class_method" title="with_original_env (class method)">.<strong>with_original_env</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="class_attr_details" class="attr_details">
+    <h2>Class Attribute Details</h2>
+    
+      
+      <span id="bundle_path=-class_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="bundle_path-class_method">
+  
+    .<strong>bundle_path</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns absolute path of where gems are installed on the filesystem.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bundle_path'>bundle_path</span>
+  <span class='ivar'>@bundle_path</span> <span class='op'>||=</span> <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_root'>root</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="app_cache-class_method">
+  
+    .<strong>app_cache</strong>(custom_path = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+224
+225
+226
+227</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 224</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_app_cache'>app_cache</span><span class='lparen'>(</span><span class='id identifier rubyid_custom_path'>custom_path</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_custom_path'>custom_path</span> <span class='op'>||</span> <span class='id identifier rubyid_root'>root</span>
+  <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_app_cache_path'>app_cache_path</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="app_config_path-class_method">
+  
+    .<strong>app_config_path</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+216
+217
+218
+219
+220
+221
+222</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 216</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_app_config_path'>app_config_path</span>
+  <span class='kw'>if</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BUNDLE_APP_CONFIG</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BUNDLE_APP_CONFIG</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_root'>root</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_root'>root</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.bundle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bin_path-class_method">
+  
+    .<strong>bin_path</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns absolute location of where binstubs are installed to.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bin_path'>bin_path</span>
+  <span class='ivar'>@bin_path</span> <span class='op'>||=</span> <span class='kw'>begin</span>
+    <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_settings'>settings</span><span class='lbracket'>[</span><span class='symbol'>:bin</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bin</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_root'>root</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span>
+    <span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_filesystem_access'>filesystem_access</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='op'>|</span> <span class='const'>FileUtils</span><span class='period'>.</span><span class='id identifier rubyid_mkdir_p'>mkdir_p</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_path'>path</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="cache-class_method">
+  
+    .<strong>cache</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+198
+199
+200</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 198</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_cache'>cache</span>
+  <span class='id identifier rubyid_bundle_path'>bundle_path</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cache/bundler</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clean_env-class_method">
+  
+    .<strong>clean_env</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>Use `original_env` instead</p>
+</div></div>
+
+<p>Returns Environment with all bundler-related variables removed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Environment with all bundler-related variables removed</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 258</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_env'>clean_env</span>
+  <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_major_deprecation'>major_deprecation</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>`Bundler.clean_env` has weird edge cases, use `.original_env` instead</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_env'>env</span> <span class='op'>=</span> <span class='id identifier rubyid_original_env'>original_env</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_env'>env</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BUNDLER_ORIG_MANPATH</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_env'>env</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MANPATH</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_env'>env</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BUNDLER_ORIG_MANPATH</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_env'>env</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='op'>|</span> <span class='id identifier rubyid_k'>k</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>7</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BUNDLE_</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_env'>env</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RUBYOPT</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_env'>env</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RUBYOPT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_env'>env</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RUBYOPT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-rbundler/setup</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_env'>env</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RUBYLIB</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_rubylib'>rubylib</span> <span class='op'>=</span> <span class='id identifier rubyid_env'>env</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RUBYLIB</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'>File</span><span class='op'>::</span><span class='const'>PATH_SEPARATOR</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_rubylib'>rubylib</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>..</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_env'>env</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RUBYLIB</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_rubylib'>rubylib</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>File</span><span class='op'>::</span><span class='const'>PATH_SEPARATOR</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_env'>env</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clean_exec-class_method">
+  
+    .<strong>clean_exec</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 293</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_exec'>clean_exec</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_clean_env'>with_clean_env</span> <span class='lbrace'>{</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clean_system-class_method">
+  
+    .<strong>clean_system</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+289
+290
+291</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 289</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_system'>clean_system</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_with_clean_env'>with_clean_env</span> <span class='lbrace'>{</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_system'>system</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_gemspec_cache-class_method">
+  
+    .<strong>clear_gemspec_cache</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+431
+432
+433</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 431</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear_gemspec_cache'>clear_gemspec_cache</span>
+  <span class='ivar'>@gemspec_cache</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="configure-class_method">
+  
+    .<strong>configure</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_configure'>configure</span>
+  <span class='ivar'>@configured</span> <span class='op'>||=</span> <span class='id identifier rubyid_configure_gem_home_and_path'>configure_gem_home_and_path</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="current_ruby-class_method">
+  
+    .<strong>current_ruby</strong>  &#x21d2; <tt><span class='object_link'><a href="Bundler/CurrentRuby.html" title="Bundler::CurrentRuby (class)">CurrentRuby</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns current version of Ruby</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Bundler/CurrentRuby.html" title="Bundler::CurrentRuby (class)">CurrentRuby</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Current version of Ruby</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/current_ruby.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_current_ruby'>current_ruby</span>
+  <span class='ivar'>@current_ruby</span> <span class='op'>||=</span> <span class='const'>CurrentRuby</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_bundle_dir-class_method">
+  
+    .<strong>default_bundle_dir</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+310
+311
+312</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 310</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_bundle_dir'>default_bundle_dir</span>
+  <span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_default_bundle_dir'>default_bundle_dir</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_gemfile-class_method">
+  
+    .<strong>default_gemfile</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+302
+303
+304</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 302</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_gemfile'>default_gemfile</span>
+  <span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_default_gemfile'>default_gemfile</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_lockfile-class_method">
+  
+    .<strong>default_lockfile</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+306
+307
+308</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 306</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_lockfile'>default_lockfile</span>
+  <span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_default_lockfile'>default_lockfile</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="definition-class_method">
+  
+    .<strong>definition</strong>(unlock = nil)  &#x21d2; <tt><span class='object_link'><a href="Bundler/Definition.html" title="Bundler::Definition (class)">Bundler::Definition</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns an instance of Bundler::Definition for given Gemfile and lockfile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>unlock</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>Boolean</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Gems that have been requested to be updated or true if all gems should be
+updated</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Bundler/Definition.html" title="Bundler::Definition (class)">Bundler::Definition</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_definition'>definition</span><span class='lparen'>(</span><span class='id identifier rubyid_unlock'>unlock</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@definition</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_unlock'>unlock</span>
+  <span class='ivar'>@definition</span> <span class='op'>||=</span> <span class='kw'>begin</span>
+    <span class='id identifier rubyid_configure'>configure</span>
+    <span class='const'>Definition</span><span class='period'>.</span><span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='id identifier rubyid_default_gemfile'>default_gemfile</span><span class='comma'>,</span> <span class='id identifier rubyid_default_lockfile'>default_lockfile</span><span class='comma'>,</span> <span class='id identifier rubyid_unlock'>unlock</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="environment-class_method">
+  
+    .<strong>environment</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116
+117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_environment'>environment</span>
+  <span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_major_deprecation'>major_deprecation</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bundler.environment has been removed in favor of Bundler.load</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_load'>load</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="feature_flag-class_method">
+  
+    .<strong>feature_flag</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+440
+441
+442</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 440</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_feature_flag'>feature_flag</span>
+  <span class='ivar'>@feature_flag</span> <span class='op'>||=</span> <span class='const'>FeatureFlag</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>VERSION</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="git_present?-class_method">
+  
+    .<strong>git_present?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+435
+436
+437
+438</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 435</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_git_present?'>git_present?</span>
+  <span class='kw'>return</span> <span class='ivar'>@git_present</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@git_present</span><span class='rparen'>)</span>
+  <span class='ivar'>@git_present</span> <span class='op'>=</span> <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_which'>which</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>git</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_which'>which</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>git.exe</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="home-class_method">
+  
+    .<strong>home</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 186</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_home'>home</span>
+  <span class='id identifier rubyid_bundle_path'>bundle_path</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bundler</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="install_path-class_method">
+  
+    .<strong>install_path</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+190
+191
+192</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 190</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_install_path'>install_path</span>
+  <span class='id identifier rubyid_home'>home</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gems</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load-class_method">
+  
+    .<strong>load</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 110</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load'>load</span>
+  <span class='ivar'>@load</span> <span class='op'>||=</span> <span class='const'>Runtime</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_root'>root</span><span class='comma'>,</span> <span class='id identifier rubyid_definition'>definition</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_gemspec-class_method">
+  
+    .<strong>load_gemspec</strong>(file, validate = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+404
+405
+406
+407
+408
+409
+410
+411</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 404</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_gemspec'>load_gemspec</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_validate'>validate</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@gemspec_cache</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='ivar'>@gemspec_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_load_gemspec_uncached'>load_gemspec_uncached</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_validate'>validate</span><span class='rparen'>)</span>
+  <span class='comment'># Protect against caching side-effected gemspecs by returning a
+</span>  <span class='comment'># new instance each time.
+</span>  <span class='ivar'>@gemspec_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='kw'>if</span> <span class='ivar'>@gemspec_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_gemspec_uncached-class_method">
+  
+    .<strong>load_gemspec_uncached</strong>(file, validate = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 413</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_gemspec_uncached'>load_gemspec_uncached</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_validate'>validate</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='comment'># Eval the gemspec from its parent directory, because some gemspecs
+</span>  <span class='comment'># depend on &quot;./&quot; relative paths.
+</span>  <span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_chdir'>chdir</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_contents'>contents</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span>
+    <span class='id identifier rubyid_spec'>spec</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_contents'>contents</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>---</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># YAML header
+</span>      <span class='id identifier rubyid_eval_yaml_gemspec'>eval_yaml_gemspec</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_contents'>contents</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_eval_gemspec'>eval_gemspec</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_contents'>contents</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_spec'>spec</span>
+    <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_loaded_from'>loaded_from</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_rubygems'>rubygems</span><span class='period'>.</span><span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_validate'>validate</span>
+    <span class='id identifier rubyid_spec'>spec</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_marshal-class_method">
+  
+    .<strong>load_marshal</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+398
+399
+400
+401
+402</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 398</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_marshal'>load_marshal</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='const'>Marshal</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>MarshalError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="local_platform-class_method">
+  
+    .<strong>local_platform</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+297
+298
+299
+300</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 297</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_local_platform'>local_platform</span>
+  <span class='kw'>return</span> <span class='const'>Gem</span><span class='op'>::</span><span class='const'>Platform</span><span class='op'>::</span><span class='const'>RUBY</span> <span class='kw'>if</span> <span class='id identifier rubyid_settings'>settings</span><span class='lbracket'>[</span><span class='symbol'>:force_ruby_platform</span><span class='rbracket'>]</span>
+  <span class='const'>Gem</span><span class='op'>::</span><span class='const'>Platform</span><span class='period'>.</span><span class='id identifier rubyid_local'>local</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="locked_gems-class_method">
+  
+    .<strong>locked_gems</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134
+135
+136
+137
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_locked_gems'>locked_gems</span>
+  <span class='ivar'>@locked_gems</span> <span class='op'>||=</span>
+    <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@definition</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@definition</span>
+      <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_locked_gems'>locked_gems</span>
+    <span class='kw'>elsif</span> <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_default_lockfile'>default_lockfile</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span>
+      <span class='id identifier rubyid_lock'>lock</span> <span class='op'>=</span> <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_read_file'>read_file</span><span class='lparen'>(</span><span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_default_lockfile'>default_lockfile</span><span class='rparen'>)</span>
+      <span class='const'>LockfileParser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_lock'>lock</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="mkdir_p-class_method">
+  
+    .<strong>mkdir_p</strong>(path)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+347
+348
+349
+350
+351
+352
+353
+354
+355</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 347</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mkdir_p'>mkdir_p</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_requires_sudo?'>requires_sudo?</span>
+    <span class='id identifier rubyid_sudo'>sudo</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mkdir -p &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_filesystem_access'>filesystem_access</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='symbol'>:write</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_p'>p</span><span class='op'>|</span>
+      <span class='const'>FileUtils</span><span class='period'>.</span><span class='id identifier rubyid_mkdir_p'>mkdir_p</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="original_env-class_method">
+  
+    .<strong>original_env</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Environment present before Bundler was activated</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Environment present before Bundler was activated</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+252
+253
+254</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 252</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_original_env'>original_env</span>
+  <span class='const'>ORIGINAL_ENV</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_file-class_method">
+  
+    .<strong>read_file</strong>(file)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+394
+395
+396</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 394</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_read_file'>read_file</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rb</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='symbol'>:read</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="require-class_method">
+  
+    .<strong>require</strong>(*groups)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 106</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_require'>require</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_groups'>groups</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_setup'>setup</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_groups'>groups</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_require'>require</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_groups'>groups</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="requires_sudo?-class_method">
+  
+    .<strong>requires_sudo?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 323</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_requires_sudo?'>requires_sudo?</span>
+  <span class='kw'>return</span> <span class='ivar'>@requires_sudo</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@requires_sudo_ran</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_sudo_present'>sudo_present</span> <span class='op'>=</span> <span class='id identifier rubyid_which'>which</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sudo</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_allow_sudo?'>allow_sudo?</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_sudo_present'>sudo_present</span>
+    <span class='comment'># the bundle path and subdirectories need to be writable for Rubygems
+</span>    <span class='comment'># to be able to unpack and install gems without exploding
+</span>    <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_bundle_path'>bundle_path</span>
+    <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_parent'>parent</span> <span class='kw'>until</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span>
+
+    <span class='comment'># bins are written to a different location on OS X
+</span>    <span class='id identifier rubyid_bin_dir'>bin_dir</span> <span class='op'>=</span> <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_system_bindir'>system_bindir</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_bin_dir'>bin_dir</span> <span class='op'>=</span> <span class='id identifier rubyid_bin_dir'>bin_dir</span><span class='period'>.</span><span class='id identifier rubyid_parent'>parent</span> <span class='kw'>until</span> <span class='id identifier rubyid_bin_dir'>bin_dir</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span>
+
+    <span class='comment'># if any directory is not writable, we need sudo
+</span>    <span class='id identifier rubyid_files'>files</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_bin_dir'>bin_dir</span><span class='rbracket'>]</span> <span class='op'>|</span> <span class='const'>Dir</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>build_info/*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>|</span> <span class='const'>Dir</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_sudo_needed'>sudo_needed</span> <span class='op'>=</span> <span class='id identifier rubyid_files'>files</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span> <span class='op'>!</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_writable?'>writable?</span><span class='lparen'>(</span><span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@requires_sudo_ran</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@requires_sudo</span> <span class='op'>=</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_allow_sudo?'>allow_sudo?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_sudo_present'>sudo_present</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_sudo_needed'>sudo_needed</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset!-class_method">
+  
+    .<strong>reset!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+444
+445
+446
+447
+448</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 444</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset!'>reset!</span>
+  <span class='id identifier rubyid_reset_paths!'>reset_paths!</span>
+  <span class='const'>Plugin</span><span class='period'>.</span><span class='id identifier rubyid_reset!'>reset!</span>
+  <span class='id identifier rubyid_reset_rubygems!'>reset_rubygems!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset_paths!-class_method">
+  
+    .<strong>reset_paths!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 450</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset_paths!'>reset_paths!</span>
+  <span class='ivar'>@root</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@settings</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@definition</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@setup</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@load</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@locked_gems</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@bundle_path</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@bin_path</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@user_home</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset_rubygems!-class_method">
+  
+    .<strong>reset_rubygems!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+462
+463
+464
+465
+466
+467</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 462</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset_rubygems!'>reset_rubygems!</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@rubygems</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@rubygems</span>
+  <span class='id identifier rubyid_rubygems'>rubygems</span><span class='period'>.</span><span class='id identifier rubyid_undo_replacements'>undo_replacements</span>
+  <span class='id identifier rubyid_rubygems'>rubygems</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span>
+  <span class='ivar'>@rubygems</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rm_rf-class_method">
+  
+    .<strong>rm_rf</strong>(path)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 233</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rm_rf'>rm_rf</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+  <span class='const'>FileUtils</span><span class='period'>.</span><span class='id identifier rubyid_remove_entry_secure'>remove_entry_secure</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_path'>path</span> <span class='op'>&amp;&amp;</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='const'>ArgumentError</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;EOF</span>
+<span class='tstring_content'>It is a security vulnerability to allow your home directory to be world-writable, and bundler can not continue.
+You should probably consider fixing this issue by running `chmod o-w ~` on *nix.
+Please refer to http://ruby-doc.org/stdlib-2.1.2/libdoc/fileutils/rdoc/FileUtils.html#method-c-remove_entry_secure for details.
+</span><span class='heredoc_end'>EOF
+</span>  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_world_writable?'>world_writable?</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_ui'>ui</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_raise'>raise</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>PathError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Please fix the world-writable issue with your </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'> directory</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="root-class_method">
+  
+    .<strong>root</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+206
+207
+208
+209
+210
+211
+212
+213
+214</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 206</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_root'>root</span>
+  <span class='ivar'>@root</span> <span class='op'>||=</span> <span class='kw'>begin</span>
+              <span class='id identifier rubyid_default_gemfile'>default_gemfile</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span>
+            <span class='kw'>rescue</span> <span class='const'>GemfileNotFound</span>
+              <span class='id identifier rubyid_bundle_dir'>bundle_dir</span> <span class='op'>=</span> <span class='id identifier rubyid_default_bundle_dir'>default_bundle_dir</span>
+              <span class='id identifier rubyid_raise'>raise</span> <span class='const'>GemfileNotFound</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not locate Gemfile or .bundle/ directory</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_bundle_dir'>bundle_dir</span>
+              <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>..</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_bundle_dir'>bundle_dir</span><span class='rparen'>)</span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ruby_scope-class_method">
+  
+    .<strong>ruby_scope</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ruby_scope'>ruby_scope</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_rubygems'>rubygems</span><span class='period'>.</span><span class='id identifier rubyid_ruby_engine'>ruby_engine</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_rubygems'>rubygems</span><span class='period'>.</span><span class='id identifier rubyid_config_map'>config_map</span><span class='lbracket'>[</span><span class='symbol'>:ruby_version</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rubygems-class_method">
+  
+    .<strong>rubygems</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/rubygems_integration.rb', line 783</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rubygems'>rubygems</span>
+  <span class='ivar'>@rubygems</span> <span class='op'>||=</span> <span class='kw'>if</span> <span class='const'>RubygemsIntegration</span><span class='period'>.</span><span class='id identifier rubyid_provides?'>provides?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;= 2.1.0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'>RubygemsIntegration</span><span class='op'>::</span><span class='const'>MoreFuture</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>elsif</span> <span class='const'>RubygemsIntegration</span><span class='period'>.</span><span class='id identifier rubyid_provides?'>provides?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;= 1.99.99</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'>RubygemsIntegration</span><span class='op'>::</span><span class='const'>Future</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>elsif</span> <span class='const'>RubygemsIntegration</span><span class='period'>.</span><span class='id identifier rubyid_provides?'>provides?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;= 1.8.20</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'>RubygemsIntegration</span><span class='op'>::</span><span class='const'>MoreModern</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>elsif</span> <span class='const'>RubygemsIntegration</span><span class='period'>.</span><span class='id identifier rubyid_provides?'>provides?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;= 1.8.5</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'>RubygemsIntegration</span><span class='op'>::</span><span class='const'>Modern</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>elsif</span> <span class='const'>RubygemsIntegration</span><span class='period'>.</span><span class='id identifier rubyid_provides?'>provides?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;= 1.8.0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'>RubygemsIntegration</span><span class='op'>::</span><span class='const'>AlmostModern</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>elsif</span> <span class='const'>RubygemsIntegration</span><span class='period'>.</span><span class='id identifier rubyid_provides?'>provides?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;= 1.7.0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'>RubygemsIntegration</span><span class='op'>::</span><span class='const'>Transitional</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>elsif</span> <span class='const'>RubygemsIntegration</span><span class='period'>.</span><span class='id identifier rubyid_provides?'>provides?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;= 1.4.0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='const'>RubygemsIntegration</span><span class='op'>::</span><span class='const'>Legacy</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>else</span> <span class='comment'># Rubygems 1.3.6 and 1.3.7
+</span>    <span class='const'>RubygemsIntegration</span><span class='op'>::</span><span class='const'>Ancient</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="settings-class_method">
+  
+    .<strong>settings</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+245
+246
+247
+248
+249</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 245</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_settings'>settings</span>
+  <span class='ivar'>@settings</span> <span class='op'>||=</span> <span class='const'>Settings</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_app_config_path'>app_config_path</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='const'>GemfileNotFound</span>
+  <span class='ivar'>@settings</span> <span class='op'>=</span> <span class='const'>Settings</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.bundle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setup-class_method">
+  
+    .<strong>setup</strong>(*groups)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_groups'>groups</span><span class='rparen'>)</span>
+  <span class='comment'># Return if all groups are already loaded
+</span>  <span class='kw'>return</span> <span class='ivar'>@setup</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@setup</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@setup</span>
+
+  <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_validate_runtime!'>validate_runtime!</span>
+
+  <span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_print_major_deprecations!'>print_major_deprecations!</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_groups'>groups</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='comment'># Load all groups, but only once
+</span>    <span class='ivar'>@setup</span> <span class='op'>=</span> <span class='id identifier rubyid_load'>load</span><span class='period'>.</span><span class='id identifier rubyid_setup'>setup</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_load'>load</span><span class='period'>.</span><span class='id identifier rubyid_setup'>setup</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_groups'>groups</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="specs_path-class_method">
+  
+    .<strong>specs_path</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 194</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_specs_path'>specs_path</span>
+  <span class='id identifier rubyid_bundle_path'>bundle_path</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>specifications</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sudo-class_method">
+  
+    .<strong>sudo</strong>(str)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 370</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sudo'>sudo</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
+  <span class='const'>SUDO_MUTEX</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_prompt'>prompt</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='heredoc_beg'>&lt;&lt;-PROMPT</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ {6}</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span>
+<span class='tstring_content'>    Your user account isn&#39;t allowed to install to the system RubyGems.
+    You can cancel this installation and run:
+
+        bundle install --path vendor/bundle
+
+    to install the gems into ./vendor/bundle/, or you can enter your password
+    and install the bundled gems to RubyGems using sudo.
+
+    Password:
+</span><span class='heredoc_end'>    PROMPT
+</span>
+    <span class='kw'>unless</span> <span class='ivar'>@prompted_for_sudo</span> <span class='op'>||=</span> <span class='id identifier rubyid_system'>system</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>sudo -k -p &quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_prompt'>prompt</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot; true</span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>SudoNotPermittedError</span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bundler requires sudo access to install at the moment. </span><span class='tstring_end'>&quot;</span></span> \
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Try installing again, granting Bundler sudo access when prompted, or installing into a different path.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='backtick'>`</span><span class='tstring_content'>sudo -p &quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_prompt'>prompt</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_str'>str</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="system_bindir-class_method">
+  
+    .<strong>system_bindir</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316
+317
+318
+319
+320
+321</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 314</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_system_bindir'>system_bindir</span>
+  <span class='comment'># Gem.bindir doesn&#39;t always return the location that Rubygems will install
+</span>  <span class='comment'># system binaries. If you put &#39;-n foo&#39; in your .gemrc, Rubygems will
+</span>  <span class='comment'># install binstubs there instead. Unfortunately, Rubygems doesn&#39;t expose
+</span>  <span class='comment'># that directory at all, so rather than parse .gemrc ourselves, we allow
+</span>  <span class='comment'># the directory to be set as well, via `bundle config bindir foo`.
+</span>  <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_settings'>settings</span><span class='lbracket'>[</span><span class='symbol'>:system_bindir</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_rubygems'>rubygems</span><span class='period'>.</span><span class='id identifier rubyid_gem_bindir'>gem_bindir</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tmp-class_method">
+  
+    .<strong>tmp</strong>(name = Process.pid.to_s)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+229
+230
+231</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 229</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tmp'>tmp</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+  <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_mktmpdir'>mktmpdir</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bundler</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tmp_home_path-class_method">
+  
+    .<strong>tmp_home_path</strong>(login, warning)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 168</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tmp_home_path'>tmp_home_path</span><span class='lparen'>(</span><span class='id identifier rubyid_login'>login</span><span class='comma'>,</span> <span class='id identifier rubyid_warning'>warning</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_login'>login</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_tmpdir'>tmpdir</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bundler</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>home</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='const'>SharedHelpers</span><span class='period'>.</span><span class='id identifier rubyid_filesystem_access'>filesystem_access</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tmp_home_path'>tmp_home_path</span><span class='op'>|</span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_tmp_home_path'>tmp_home_path</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span>
+      <span class='id identifier rubyid_tmp_home_path'>tmp_home_path</span><span class='period'>.</span><span class='id identifier rubyid_mkpath'>mkpath</span>
+      <span class='id identifier rubyid_tmp_home_path'>tmp_home_path</span><span class='period'>.</span><span class='id identifier rubyid_chmod'>chmod</span><span class='lparen'>(</span><span class='int'>0o777</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_tmp_home_path'>tmp_home_path</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_login'>login</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:mkpath</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_warning'>warning</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nBundler also failed to create a temporary home directory at `</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;:\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ui-class_method">
+  
+    .<strong>ui</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ui'>ui</span>
+  <span class='lparen'>(</span><span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@ui</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@ui</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ui'>ui</span> <span class='op'>=</span> <span class='const'>UI</span><span class='op'>::</span><span class='const'>Silent</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ui=-class_method">
+  
+    .<strong>ui=</strong>(ui)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ui='>ui=</span><span class='lparen'>(</span><span class='id identifier rubyid_ui'>ui</span><span class='rparen'>)</span>
+  <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_rubygems'>rubygems</span><span class='period'>.</span><span class='id identifier rubyid_ui'>ui</span> <span class='op'>=</span> <span class='id identifier rubyid_ui'>ui</span> <span class='op'>?</span> <span class='const'>UI</span><span class='op'>::</span><span class='const'>RGProxy</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_ui'>ui</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>nil</span>
+  <span class='ivar'>@ui</span> <span class='op'>=</span> <span class='id identifier rubyid_ui'>ui</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_bundle_path-class_method">
+  
+    .<strong>user_bundle_path</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+182
+183
+184</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 182</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_bundle_path'>user_bundle_path</span>
+  <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_user_home'>user_home</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.bundle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_cache-class_method">
+  
+    .<strong>user_cache</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+202
+203
+204</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 202</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_cache'>user_cache</span>
+  <span class='id identifier rubyid_user_bundle_path'>user_bundle_path</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cache</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_home-class_method">
+  
+    .<strong>user_home</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 146</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_user_home'>user_home</span>
+  <span class='ivar'>@user_home</span> <span class='op'>||=</span> <span class='kw'>begin</span>
+    <span class='id identifier rubyid_home'>home</span> <span class='op'>=</span> <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_rubygems'>rubygems</span><span class='period'>.</span><span class='id identifier rubyid_user_home'>user_home</span>
+
+    <span class='id identifier rubyid_warning'>warning</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_home'>home</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Your home directory is not set.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='op'>!</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_directory?'>directory?</span><span class='lparen'>(</span><span class='id identifier rubyid_home'>home</span><span class='rparen'>)</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>`</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_home'>home</span><span class='embexpr_end'>}</span><span class='tstring_content'>` is not a directory.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='op'>!</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_writable?'>writable?</span><span class='lparen'>(</span><span class='id identifier rubyid_home'>home</span><span class='rparen'>)</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>`</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_home'>home</span><span class='embexpr_end'>}</span><span class='tstring_content'>` is not writable.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_warning'>warning</span>
+      <span class='id identifier rubyid_user_home'>user_home</span> <span class='op'>=</span> <span class='id identifier rubyid_tmp_home_path'>tmp_home_path</span><span class='lparen'>(</span><span class='const'>Etc</span><span class='period'>.</span><span class='id identifier rubyid_getlogin'>getlogin</span><span class='comma'>,</span> <span class='id identifier rubyid_warning'>warning</span><span class='rparen'>)</span>
+      <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_ui'>ui</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_warning'>warning</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nBundler will use `</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_user_home'>user_home</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; as your home directory temporarily.\n</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_user_home'>user_home</span>
+    <span class='kw'>else</span>
+      <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_home'>home</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="which-class_method">
+  
+    .<strong>which</strong>(executable)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 357</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_which'>which</span><span class='lparen'>(</span><span class='id identifier rubyid_executable'>executable</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span><span class='lparen'>(</span><span class='id identifier rubyid_executable'>executable</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_executable?'>executable?</span><span class='lparen'>(</span><span class='id identifier rubyid_executable'>executable</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_executable'>executable</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_paths'>paths</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PATH</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_quote'>quote</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
+    <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'>File</span><span class='op'>::</span><span class='const'>PATH_SEPARATOR</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='op'>|</span>
+      <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_start_with?'>start_with?</span><span class='lparen'>(</span><span class='id identifier rubyid_quote'>quote</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_end_with?'>end_with?</span><span class='lparen'>(</span><span class='id identifier rubyid_quote'>quote</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_executable_path'>executable_path</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_executable'>executable</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='id identifier rubyid_executable_path'>executable_path</span> <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span><span class='lparen'>(</span><span class='id identifier rubyid_executable_path'>executable_path</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_executable?'>executable?</span><span class='lparen'>(</span><span class='id identifier rubyid_executable_path'>executable_path</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_clean_env-class_method">
+  
+    .<strong>with_clean_env</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+285
+286
+287</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 285</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_with_clean_env'>with_clean_env</span>
+  <span class='id identifier rubyid_with_env'>with_env</span><span class='lparen'>(</span><span class='id identifier rubyid_clean_env'>clean_env</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='kw'>yield</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_friendly_errors-class_method">
+  
+    .<strong>with_friendly_errors</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+120
+121
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/friendly_errors.rb', line 120</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_with_friendly_errors'>with_friendly_errors</span>
+  <span class='kw'>yield</span>
+<span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='const'>FriendlyErrors</span><span class='period'>.</span><span class='id identifier rubyid_log_error'>log_error</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_exit'>exit</span> <span class='const'>FriendlyErrors</span><span class='period'>.</span><span class='id identifier rubyid_exit_status'>exit_status</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_original_env-class_method">
+  
+    .<strong>with_original_env</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+281
+282
+283</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler.rb', line 281</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_with_original_env'>with_original_env</span>
+  <span class='id identifier rubyid_with_env'>with_env</span><span class='lparen'>(</span><span class='id identifier rubyid_original_env'>original_env</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='kw'>yield</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat Mar 18 19:39:32 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

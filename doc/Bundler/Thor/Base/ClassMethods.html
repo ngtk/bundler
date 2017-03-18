@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Bundler::Thor::Base::ClassMethods
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Bundler::Thor::Base::ClassMethods";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Bundler.html" title="Bundler (module)">Bundler</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Thor.html" title="Bundler::Thor (class)">Thor</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Base.html" title="Bundler::Thor::Base (module)">Base</a></span></span>
+     &raquo; 
+    <span class="title">ClassMethods</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../../../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: Bundler::Thor::Base::ClassMethods
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bundler/vendor/thor/lib/thor/base.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all_commands-instance_method" title="#all_commands (instance method)">#<strong>all_commands</strong>  &#x21d2; Object </a>
+    
+
+    
+      (also: #all_tasks)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the commands for this Bundler::Thor class and all subclasses.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#argument-instance_method" title="#argument (instance method)">#<strong>argument</strong>(name, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds an argument to the class and creates an attr_accessor for it.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#arguments-instance_method" title="#arguments (instance method)">#<strong>arguments</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns this class arguments, looking up in the ancestors chain.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attr_accessor-instance_method" title="#attr_accessor (instance method)">#<strong>attr_accessor</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attr_reader-instance_method" title="#attr_reader (instance method)">#<strong>attr_reader</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attr_writer-instance_method" title="#attr_writer (instance method)">#<strong>attr_writer</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_unknown_options-instance_method" title="#check_unknown_options (instance method)">#<strong>check_unknown_options</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_unknown_options%21-instance_method" title="#check_unknown_options! (instance method)">#<strong>check_unknown_options!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If you want to raise an error for unknown options, call
+check_unknown_options! This is disabled by default to allow dynamic
+invocations.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_unknown_options%3F-instance_method" title="#check_unknown_options? (instance method)">#<strong>check_unknown_options?</strong>(config)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#class_option-instance_method" title="#class_option (instance method)">#<strong>class_option</strong>(name, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds an option to the set of class options.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#class_options-instance_method" title="#class_options (instance method)">#<strong>class_options</strong>(options = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds a bunch of options to the set of class options.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#commands-instance_method" title="#commands (instance method)">#<strong>commands</strong>  &#x21d2; Object </a>
+    
+
+    
+      (also: #tasks)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the commands for this Bundler::Thor class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#group-instance_method" title="#group (instance method)">#<strong>group</strong>(name = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines the group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_argument_error-instance_method" title="#handle_argument_error (instance method)">#<strong>handle_argument_error</strong>(command, error, args, arity)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_no_command_error-instance_method" title="#handle_no_command_error (instance method)">#<strong>handle_no_command_error</strong>(command, has_namespace = $thor_runner)  &#x21d2; Object </a>
+    
+
+    
+      (also: #handle_no_task_error)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#namespace-instance_method" title="#namespace (instance method)">#<strong>namespace</strong>(name = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the namespace for the Bundler::Thor or Bundler::Thor::Group class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#no_commands-instance_method" title="#no_commands (instance method)">#<strong>no_commands</strong>  &#x21d2; Object </a>
+    
+
+    
+      (also: #no_tasks)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>All methods defined inside the given block are not added as commands.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#public_command-instance_method" title="#public_command (instance method)">#<strong>public_command</strong>(*names)  &#x21d2; Object </a>
+    
+
+    
+      (also: #public_task)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Allows to use private methods from parent in child classes as commands.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_argument-instance_method" title="#remove_argument (instance method)">#<strong>remove_argument</strong>(*names)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Removes a previous defined argument.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_class_option-instance_method" title="#remove_class_option (instance method)">#<strong>remove_class_option</strong>(*names)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Removes a previous defined class option.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_command-instance_method" title="#remove_command (instance method)">#<strong>remove_command</strong>(*names)  &#x21d2; Object </a>
+    
+
+    
+      (also: #remove_task)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Removes a given command from this Bundler::Thor class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-instance_method" title="#start (instance method)">#<strong>start</strong>(given_args = ARGV, config = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Parses the command and options from the given args, instantiate the class
+and invoke the command.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stop_on_unknown_option%3F-instance_method" title="#stop_on_unknown_option? (instance method)">#<strong>stop_on_unknown_option?</strong>(command_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If true, option parsing is suspended as soon as an unknown option or a
+regular argument is encountered.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#strict_args_position-instance_method" title="#strict_args_position (instance method)">#<strong>strict_args_position</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#strict_args_position%21-instance_method" title="#strict_args_position! (instance method)">#<strong>strict_args_position!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If you want only strict string args (useful when cascading thor classes),
+call strict_args_position! This is disabled by default to allow dynamic
+invocations.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#strict_args_position%3F-instance_method" title="#strict_args_position? (instance method)">#<strong>strict_args_position?</strong>(config)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="all_commands-instance_method">
+  
+    #<strong>all_commands</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='all_tasks-instance_method'>all_tasks</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the commands for this Bundler::Thor class and all subclasses.</p>
+
+<h4 id="label-Returns">Returns</h4>
+<dl class="rdoc-list note-list"><dt>OrderedHash
+<dd>
+<p>An ordered hash with commands names as keys and Bundler::Thor::Command
+objects as values.</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+348
+349
+350
+351</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 348</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_all_commands'>all_commands</span>
+  <span class='ivar'>@all_commands</span> <span class='op'>||=</span> <span class='id identifier rubyid_from_superclass'>from_superclass</span><span class='lparen'>(</span><span class='symbol'>:all_commands</span><span class='comma'>,</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span><span class='op'>::</span><span class='const'>CoreExt</span><span class='op'>::</span><span class='const'>OrderedHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+  <span class='ivar'>@all_commands</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_commands'>commands</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="argument-instance_method">
+  
+    #<strong>argument</strong>(name, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Adds an argument to the class and creates an attr_accessor for it.</p>
+
+<p>Arguments are different from options in several aspects. The first one is
+how they are parsed from the command line, arguments are retrieved from
+position:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_thor'>thor</span> <span class='id identifier rubyid_command'>command</span> <span class='const'>NAME</span>
+</code></pre>
+
+<p>Instead of:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_thor'>thor</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>-</span><span class='op'>-</span><span class='id identifier rubyid_name'>name</span><span class='op'>=</span><span class='const'>NAME</span>
+</code></pre>
+
+<p>Besides, arguments are used inside your code as an accessor
+(self.argument), while options are all kept in a hash (self.options).</p>
+
+<p>Finally, arguments cannot have type :default or :boolean but can be
+optional (supplying :optional =&gt; :true or :required =&gt; false),
+although you cannot have a required argument after a non-required argument.
+If you try it, an error is raised.</p>
+
+<h4 id="label-Parameters">Parameters</h4>
+<dl class="rdoc-list note-list"><dt>name&lt;Symbol&gt;
+<dd>
+<p>The name of the argument.</p>
+</dd><dt>options&lt;Hash&gt;
+<dd>
+<p>Described below.</p>
+</dd></dl>
+
+<h4 id="label-Options">Options</h4>
+
+<p>:desc     - Description for the argument. :required - If the argument is
+required or not. :optional - If the argument is optional or not. :type    
+- The type of the argument, can be :string, :hash, :array, :numeric.
+:default  - Default value for this argument. It cannot be required and have
+default values. :banner   - String to show on usage notes.</p>
+
+<h4 id="label-Errors">Errors</h4>
+<dl class="rdoc-list note-list"><dt>ArgumentError
+<dd>
+<p>Raised if you supply a required argument after a non required one.</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 210</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_is_thor_reserved_word?'>is_thor_reserved_word?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='symbol'>:argument</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_no_commands'>no_commands</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_attr_accessor'>attr_accessor</span> <span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_required'>required</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:optional</span><span class='rparen'>)</span>
+    <span class='op'>!</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:optional</span><span class='rbracket'>]</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:required</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:required</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_remove_argument'>remove_argument</span> <span class='id identifier rubyid_name'>name</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_required'>required</span>
+    <span class='id identifier rubyid_arguments'>arguments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_argument'>argument</span><span class='op'>|</span>
+      <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_argument'>argument</span><span class='period'>.</span><span class='id identifier rubyid_required?'>required?</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You cannot have </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> as required argument after </span><span class='tstring_end'>&quot;</span></span> \
+                          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>the non-required argument </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_argument'>argument</span><span class='period'>.</span><span class='id identifier rubyid_human_name'>human_name</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:required</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_required'>required</span>
+
+  <span class='id identifier rubyid_arguments'>arguments</span> <span class='op'>&lt;&lt;</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span><span class='op'>::</span><span class='const'>Argument</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="arguments-instance_method">
+  
+    #<strong>arguments</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns this class arguments, looking up in the ancestors chain.</p>
+
+<h4 id="label-Returns">Returns</h4>
+
+<p><a href="Bundler::Thor::Argument">Array</a></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+242
+243
+244</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 242</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_arguments'>arguments</span>
+  <span class='ivar'>@arguments</span> <span class='op'>||=</span> <span class='id identifier rubyid_from_superclass'>from_superclass</span><span class='lparen'>(</span><span class='symbol'>:arguments</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="attr_accessor-instance_method">
+  
+    #<strong>attr_accessor</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attr_accessor'>attr_accessor</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='id identifier rubyid_no_commands'>no_commands</span> <span class='lbrace'>{</span> <span class='kw'>super</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="attr_reader-instance_method">
+  
+    #<strong>attr_reader</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 127</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attr_reader'>attr_reader</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='id identifier rubyid_no_commands'>no_commands</span> <span class='lbrace'>{</span> <span class='kw'>super</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="attr_writer-instance_method">
+  
+    #<strong>attr_writer</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 131</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attr_writer'>attr_writer</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='id identifier rubyid_no_commands'>no_commands</span> <span class='lbrace'>{</span> <span class='kw'>super</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_unknown_options-instance_method">
+  
+    #<strong>check_unknown_options</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 145</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_unknown_options'>check_unknown_options</span> <span class='comment'>#:nodoc:
+</span>  <span class='ivar'>@check_unknown_options</span> <span class='op'>||=</span> <span class='id identifier rubyid_from_superclass'>from_superclass</span><span class='lparen'>(</span><span class='symbol'>:check_unknown_options</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_unknown_options!-instance_method">
+  
+    #<strong>check_unknown_options!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If you want to raise an error for unknown options, call
+check_unknown_options! This is disabled by default to allow dynamic
+invocations.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_unknown_options!'>check_unknown_options!</span>
+  <span class='ivar'>@check_unknown_options</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_unknown_options?-instance_method">
+  
+    #<strong>check_unknown_options?</strong>(config)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 149</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_unknown_options?'>check_unknown_options?</span><span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='op'>!</span><span class='op'>!</span><span class='id identifier rubyid_check_unknown_options'>check_unknown_options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="class_option-instance_method">
+  
+    #<strong>class_option</strong>(name, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Adds an option to the set of class options</p>
+
+<h4 id="label-Parameters">Parameters</h4>
+<dl class="rdoc-list note-list"><dt>name&lt;Symbol&gt;
+<dd>
+<p>The name of the argument.</p>
+</dd><dt>options&lt;Hash&gt;
+<dd>
+<p>Described below.</p>
+</dd></dl>
+
+<h4 id="label-Options">Options</h4>
+<dl class="rdoc-list note-list"><dt>:desc
+<dd>
+<p>– Description for the argument.</p>
+</dd><dt>:required
+<dd>
+<p>– If the argument is required or not.</p>
+</dd><dt>:default
+<dd>
+<p>– Default value for this argument.</p>
+</dd><dt>:group
+<dd>
+<p>– The group for this options. Use by class options to output options in
+different levels.</p>
+</dd><dt>:aliases
+<dd>
+<p>– Aliases for this option. <strong>Note:</strong> Bundler::Thor follows a
+convention of one-dash-one-letter options. Thus aliases like “-something”
+wouldn&#39;t be parsed; use either “--something” or “-s” instead.</p>
+</dd><dt>:type
+<dd>
+<p>– The type of the argument, can be :string, :hash, :array, :numeric or
+:boolean.</p>
+</dd><dt>:banner
+<dd>
+<p>– String to show on usage notes.</p>
+</dd><dt>:hide
+<dd>
+<p>– If you want to hide this option from the help.</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+277
+278
+279</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 277</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_class_option'>class_option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_build_option'>build_option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='id identifier rubyid_class_options'>class_options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="class_options-instance_method">
+  
+    #<strong>class_options</strong>(options = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Adds a bunch of options to the set of class options.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_class_options'>class_options</span> <span class='symbol'>:foo</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='symbol'>:bar</span> <span class='op'>=&gt;</span> <span class='symbol'>:required</span><span class='comma'>,</span> <span class='symbol'>:baz</span> <span class='op'>=&gt;</span> <span class='symbol'>:string</span>
+</code></pre>
+
+<p>If you prefer more detailed declaration, check class_option.</p>
+
+<h4 id="label-Parameters">Parameters</h4>
+
+<p>Hash[Symbol =&gt; Object]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+255
+256
+257
+258
+259</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 255</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_class_options'>class_options</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@class_options</span> <span class='op'>||=</span> <span class='id identifier rubyid_from_superclass'>from_superclass</span><span class='lparen'>(</span><span class='symbol'>:class_options</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_build_options'>build_options</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='ivar'>@class_options</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='ivar'>@class_options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="commands-instance_method">
+  
+    #<strong>commands</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='tasks-instance_method'>tasks</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the commands for this Bundler::Thor class.</p>
+
+<h4 id="label-Returns">Returns</h4>
+<dl class="rdoc-list note-list"><dt>OrderedHash
+<dd>
+<p>An ordered hash with commands names as keys and Bundler::Thor::Command
+objects as values.</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+337
+338
+339</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 337</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_commands'>commands</span>
+  <span class='ivar'>@commands</span> <span class='op'>||=</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span><span class='op'>::</span><span class='const'>CoreExt</span><span class='op'>::</span><span class='const'>OrderedHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="group-instance_method">
+  
+    #<strong>group</strong>(name = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Defines the group. This is used when thor list is invoked so you can
+specify that only commands from a pre-defined group will be shown. Defaults
+to standard.</p>
+
+<h4 id="label-Parameters">Parameters</h4>
+
+<p>name&lt;String|Symbol&gt;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+323
+324
+325
+326
+327
+328
+329</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 323</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_group'>group</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span>
+    <span class='ivar'>@group</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@group</span> <span class='op'>||=</span> <span class='id identifier rubyid_from_superclass'>from_superclass</span><span class='lparen'>(</span><span class='symbol'>:group</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>standard</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_argument_error-instance_method">
+  
+    #<strong>handle_argument_error</strong>(command, error, args, arity)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../InvocationError.html" title="Bundler::Thor::InvocationError (class)">InvocationError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+479
+480
+481
+482
+483
+484
+485</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 479</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_handle_argument_error'>handle_argument_error</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='id identifier rubyid_arity'>arity</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ERROR: \&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_basename'>basename</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; was called with </span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no arguments</span><span class='tstring_end'>&quot;</span></span>               <span class='kw'>if</span>     <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>arguments </span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='kw'>unless</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nUsage: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_banner'>banner</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>InvocationError</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_no_command_error-instance_method">
+  
+    #<strong>handle_no_command_error</strong>(command, has_namespace = $thor_runner)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='handle_no_task_error-instance_method'>handle_no_task_error</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../UndefinedCommandError.html" title="Bundler::Thor::UndefinedCommandError (class)">UndefinedCommandError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+473
+474
+475
+476</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 473</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_handle_no_command_error'>handle_no_command_error</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_has_namespace'>has_namespace</span> <span class='op'>=</span> <span class='gvar'>$thor_runner</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>UndefinedCommandError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not find command </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> in </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_namespace'>namespace</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> namespace.</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_has_namespace'>has_namespace</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>UndefinedCommandError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not find command </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="namespace-instance_method">
+  
+    #<strong>namespace</strong>(name = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets the namespace for the Bundler::Thor or Bundler::Thor::Group class. By
+default the namespace is retrieved from the class name. If your
+Bundler::Thor class is named Scripts::MyScript, the help method, for
+example, will be called as:</p>
+
+<pre class="code ruby"><code class="ruby">thor scripts:my_script -h</code></pre>
+
+<p>If you change the namespace:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_namespace'>namespace</span> <span class='symbol'>:my_scripts</span>
+</code></pre>
+
+<p>You change how your commands are invoked:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_thor'>thor</span> <span class='id identifier rubyid_my_scripts'>my_scripts</span> <span class='op'>-</span><span class='id identifier rubyid_h'>h</span>
+</code></pre>
+
+<p>Finally, if you change your namespace to default:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_namespace'>namespace</span> <span class='symbol'>:default</span>
+</code></pre>
+
+<p>Your commands can be invoked with a shortcut. Instead of:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_thor'>thor</span> <span class='symbol'>:my_command</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+426
+427
+428
+429
+430
+431
+432</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 426</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_namespace'>namespace</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span>
+    <span class='ivar'>@namespace</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@namespace</span> <span class='op'>||=</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span><span class='op'>::</span><span class='const'>Util</span><span class='period'>.</span><span class='id identifier rubyid_namespace_from_thor_class'>namespace_from_thor_class</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="no_commands-instance_method">
+  
+    #<strong>no_commands</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='no_tasks-instance_method'>no_tasks</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>All methods defined inside the given block are not added as commands.</p>
+
+<p>So you can do:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>MyScript</span> <span class='op'>&lt;</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span>
+  <span class='id identifier rubyid_no_commands'>no_commands</span> <span class='kw'>do</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_this_is_not_a_command'>this_is_not_a_command</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>You can also add the method and remove it from the command list:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>MyScript</span> <span class='op'>&lt;</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_this_is_not_a_command'>this_is_not_a_command</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_remove_command'>remove_command</span> <span class='symbol'>:this_is_not_a_command</span>
+<span class='kw'>end</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+396
+397
+398
+399
+400
+401</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 396</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_no_commands'>no_commands</span>
+  <span class='ivar'>@no_commands</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>yield</span>
+<span class='kw'>ensure</span>
+  <span class='ivar'>@no_commands</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="public_command-instance_method">
+  
+    #<strong>public_command</strong>(*names)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='public_task-instance_method'>public_task</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Allows to use private methods from parent in child classes as commands.</p>
+
+<h4 id="label-Parameters">Parameters</h4>
+
+<pre class="code ruby"><code class="ruby">names&lt;Array&gt;:: Method names to be used as commands</code></pre>
+
+<h4 id="label-Examples">Examples</h4>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_public_command'>public_command</span> <span class='symbol'>:foo</span>
+<span class='id identifier rubyid_public_command'>public_command</span> <span class='symbol'>:foo</span><span class='comma'>,</span> <span class='symbol'>:bar</span><span class='comma'>,</span> <span class='symbol'>:baz</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+466
+467
+468
+469
+470</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 466</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_public_command'>public_command</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+    <span class='id identifier rubyid_class_eval'>class_eval</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>(*); super end</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_argument-instance_method">
+  
+    #<strong>remove_argument</strong>(*names)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Removes a previous defined argument. If :undefine is given, undefine
+accessors as well.</p>
+
+<h4 id="label-Parameters">Parameters</h4>
+<dl class="rdoc-list note-list"><dt>names&lt;Array&gt;
+<dd>
+<p>Arguments to be removed</p>
+</dd></dl>
+
+<h4 id="label-Examples">Examples</h4>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_remove_argument'>remove_argument</span> <span class='symbol'>:foo</span>
+<span class='id identifier rubyid_remove_argument'>remove_argument</span> <span class='symbol'>:foo</span><span class='comma'>,</span> <span class='symbol'>:bar</span><span class='comma'>,</span> <span class='symbol'>:baz</span><span class='comma'>,</span> <span class='symbol'>:undefine</span> <span class='op'>=&gt;</span> <span class='kw'>true</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+292
+293
+294
+295
+296
+297
+298
+299</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 292</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_argument'>remove_argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span> <span class='op'>:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+    <span class='id identifier rubyid_arguments'>arguments</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_undef_method'>undef_method</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:undefine</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_class_option-instance_method">
+  
+    #<strong>remove_class_option</strong>(*names)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Removes a previous defined class option.</p>
+
+<h4 id="label-Parameters">Parameters</h4>
+<dl class="rdoc-list note-list"><dt>names&lt;Array&gt;
+<dd>
+<p>Class options to be removed</p>
+</dd></dl>
+
+<h4 id="label-Examples">Examples</h4>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_remove_class_option'>remove_class_option</span> <span class='symbol'>:foo</span>
+<span class='id identifier rubyid_remove_class_option'>remove_class_option</span> <span class='symbol'>:foo</span><span class='comma'>,</span> <span class='symbol'>:bar</span><span class='comma'>,</span> <span class='symbol'>:baz</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+311
+312
+313
+314
+315</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 311</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_class_option'>remove_class_option</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+    <span class='id identifier rubyid_class_options'>class_options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_command-instance_method">
+  
+    #<strong>remove_command</strong>(*names)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='remove_task-instance_method'>remove_task</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Removes a given command from this Bundler::Thor class. This is usually done
+if you are inheriting from another class and don&#39;t want it to be
+available anymore.</p>
+
+<p>By default it only remove the mapping to the command. But you can supply
+:undefine =&gt; true to undefine the method from the class as well.</p>
+
+<h4 id="label-Parameters">Parameters</h4>
+<dl class="rdoc-list note-list"><dt>name&lt;Symbol|String&gt;
+<dd>
+<p>The name of the command to be removed</p>
+</dd><dt>options&lt;Hash&gt;
+<dd>
+<p>You can give :undefine =&gt; true if you want commands the method to be
+undefined from the class as well.</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+366
+367
+368
+369
+370
+371
+372
+373
+374</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 366</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_command'>remove_command</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_names'>names</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span> <span class='op'>:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span>
+    <span class='id identifier rubyid_commands'>commands</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_all_commands'>all_commands</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_undef_method'>undef_method</span> <span class='id identifier rubyid_name'>name</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:undefine</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start-instance_method">
+  
+    #<strong>start</strong>(given_args = ARGV, config = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Parses the command and options from the given args, instantiate the class
+and invoke the command. This method is used when the arguments must be
+parsed from an array. If you are inside Ruby and want to use a
+Bundler::Thor class, you can simply initialize it:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_script'>script</span> <span class='op'>=</span> <span class='const'>MyScript</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_script'>script</span><span class='period'>.</span><span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='symbol'>:command</span><span class='comma'>,</span> <span class='id identifier rubyid_first_arg'>first_arg</span><span class='comma'>,</span> <span class='id identifier rubyid_second_arg'>second_arg</span><span class='comma'>,</span> <span class='id identifier rubyid_third_arg'>third_arg</span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 442</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_given_args'>given_args</span> <span class='op'>=</span> <span class='const'>ARGV</span><span class='comma'>,</span> <span class='id identifier rubyid_config'>config</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:shell</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span><span class='op'>::</span><span class='const'>Base</span><span class='period'>.</span><span class='id identifier rubyid_shell'>shell</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_dispatch'>dispatch</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_given_args'>given_args</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span>
+<span class='kw'>rescue</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span><span class='op'>::</span><span class='const'>Error</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:debug</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>THOR_DEBUG</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:shell</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_exit'>exit</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_exit_on_failure?'>exit_on_failure?</span>
+<span class='kw'>rescue</span> <span class='const'>Errno</span><span class='op'>::</span><span class='const'>EPIPE</span>
+  <span class='comment'># This happens if a thor command is piped to something like `head`,
+</span>  <span class='comment'># which closes the pipe when it&#39;s done reading. This will also
+</span>  <span class='comment'># mean that if the pipe is closed, further unnecessary
+</span>  <span class='comment'># computation will not occur.
+</span>  <span class='id identifier rubyid_exit'>exit</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stop_on_unknown_option?-instance_method">
+  
+    #<strong>stop_on_unknown_option?</strong>(command_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If true, option parsing is suspended as soon as an unknown option or a
+regular argument is encountered.  All remaining arguments are passed to the
+command as regular arguments.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stop_on_unknown_option?'>stop_on_unknown_option?</span><span class='lparen'>(</span><span class='id identifier rubyid_command_name'>command_name</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="strict_args_position-instance_method">
+  
+    #<strong>strict_args_position</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 167</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_strict_args_position'>strict_args_position</span> <span class='comment'>#:nodoc:
+</span>  <span class='ivar'>@strict_args_position</span> <span class='op'>||=</span> <span class='id identifier rubyid_from_superclass'>from_superclass</span><span class='lparen'>(</span><span class='symbol'>:strict_args_position</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="strict_args_position!-instance_method">
+  
+    #<strong>strict_args_position!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If you want only strict string args (useful when cascading thor classes),
+call strict_args_position! This is disabled by default to allow dynamic
+invocations.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_strict_args_position!'>strict_args_position!</span>
+  <span class='ivar'>@strict_args_position</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="strict_args_position?-instance_method">
+  
+    #<strong>strict_args_position?</strong>(config)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171
+172
+173</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/base.rb', line 171</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_strict_args_position?'>strict_args_position?</span><span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='op'>!</span><span class='op'>!</span><span class='id identifier rubyid_strict_args_position'>strict_args_position</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat Mar 18 19:39:33 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

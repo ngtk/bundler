@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Bundler::Deployment
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Bundler::Deployment";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Bundler.html" title="Bundler (module)">Bundler</a></span></span>
+     &raquo; 
+    <span class="title">Deployment</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Class: Bundler::Deployment
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Bundler::Deployment</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bundler/deployment.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#define_task-class_method" title="define_task (class method)">.<strong>define_task</strong>(context, task_method = :task, opts = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="define_task-class_method">
+  
+    .<strong>define_task</strong>(context, task_method = :task, opts = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/deployment.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_define_task'>define_task</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_task_method'>task_method</span> <span class='op'>=</span> <span class='symbol'>:task</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'>Capistrano</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Capistrano</span><span class='op'>::</span><span class='const'>Configuration</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_context_name'>context_name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>capistrano</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_role_default'>role_default</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>{:except =&gt; {:no_release =&gt; true}}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_error_type'>error_type</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Capistrano</span><span class='op'>::</span><span class='const'>CommandError</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_context_name'>context_name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vlad</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_role_default'>role_default</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[:app]</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_error_type'>error_type</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>Rake</span><span class='op'>::</span><span class='const'>CommandFailedError</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_roles'>roles</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:bundle_roles</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:roles</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_roles'>roles</span> <span class='kw'>if</span> <span class='id identifier rubyid_roles'>roles</span>
+
+  <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='symbol'>:namespace</span><span class='comma'>,</span> <span class='symbol'>:bundle</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_send'>send</span> <span class='symbol'>:desc</span><span class='comma'>,</span> <span class='heredoc_beg'>&lt;&lt;-DESC</span>
+<span class='tstring_content'>      Install the current Bundler environment. By default, gems will be \
+      installed to the shared/bundle path. Gems in the development and \
+      test group will not be installed. The install command is executed \
+      with the --deployment and --quiet flags. If the bundle cmd cannot \
+      be found then you can override the bundle_cmd variable to specify \
+      which one it should use. The base path to the app is fetched from \
+      the :latest_release variable. Set it for custom deploy layouts.
+
+      You can override any of these defaults by setting the variables shown below.
+
+      N.B. bundle_roles must be defined before you require &#39;bundler/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_context_name'>context_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; \
+      in your deploy.rb file.
+
+        set :bundle_gemfile,  &quot;Gemfile&quot;
+        set :bundle_dir,      File.join(fetch(:shared_path), &#39;bundle&#39;)
+        set :bundle_flags,    &quot;--deployment --quiet&quot;
+        set :bundle_without,  [:development, :test]
+        set :bundle_with,     [:mysql]
+        set :bundle_cmd,      &quot;bundle&quot; # e.g. &quot;/opt/ruby/bin/bundle&quot;
+        set :bundle_roles,    </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_role_default'>role_default</span><span class='embexpr_end'>}</span><span class='tstring_content'> # e.g. [:app, :batch]
+</span><span class='heredoc_end'>    DESC
+</span>    <span class='id identifier rubyid_send'>send</span> <span class='id identifier rubyid_task_method'>task_method</span><span class='comma'>,</span> <span class='symbol'>:install</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_bundle_cmd'>bundle_cmd</span>     <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:bundle_cmd</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bundle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_bundle_flags'>bundle_flags</span>   <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:bundle_flags</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--deployment --quiet</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_bundle_dir'>bundle_dir</span>     <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:bundle_dir</span><span class='comma'>,</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:shared_path</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bundle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_bundle_gemfile'>bundle_gemfile</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:bundle_gemfile</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Gemfile</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_bundle_without'>bundle_without</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='op'>*</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:bundle_without</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='symbol'>:development</span><span class='comma'>,</span> <span class='symbol'>:test</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+      <span class='id identifier rubyid_bundle_with'>bundle_with</span>    <span class='op'>=</span> <span class='lbracket'>[</span><span class='op'>*</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:bundle_with</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+      <span class='id identifier rubyid_app_path'>app_path</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:latest_release</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_app_path'>app_path</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_error_type'>error_type</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Cannot detect current release path - make sure you have deployed at least once.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--gemfile </span><span class='embexpr_beg'>#{</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_app_path'>app_path</span><span class='comma'>,</span> <span class='id identifier rubyid_bundle_gemfile'>bundle_gemfile</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_args'>args</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--path </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_bundle_dir'>bundle_dir</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_bundle_dir'>bundle_dir</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+      <span class='id identifier rubyid_args'>args</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_bundle_flags'>bundle_flags</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+      <span class='id identifier rubyid_args'>args</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--without </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_bundle_without'>bundle_without</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_bundle_without'>bundle_without</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+      <span class='id identifier rubyid_args'>args</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--with </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_bundle_with'>bundle_with</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_bundle_with'>bundle_with</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+      <span class='id identifier rubyid_run'>run</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cd </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_app_path'>app_path</span><span class='embexpr_end'>}</span><span class='tstring_content'> &amp;&amp; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_bundle_cmd'>bundle_cmd</span><span class='embexpr_end'>}</span><span class='tstring_content'> install </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat Mar 18 19:39:39 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Bundler::Thor::Shell
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Bundler::Thor::Shell";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Bundler.html" title="Bundler (module)">Bundler</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Thor.html" title="Bundler::Thor (class)">Thor</a></span></span>
+     &raquo; 
+    <span class="title">Shell</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../../class_list.html"></iframe>
+
+      <div id="content"><h1>Module: Bundler::Thor::Shell
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bundler/vendor/thor/lib/thor/shell.rb<span class="defines">,<br />
+  lib/bundler/vendor/thor/lib/thor/shell/html.rb,<br /> lib/bundler/vendor/thor/lib/thor/shell/color.rb,<br /> lib/bundler/vendor/thor/lib/thor/shell/basic.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Shell/Basic.html" title="Bundler::Thor::Shell::Basic (class)">Basic</a></span>, <span class='object_link'><a href="Shell/Color.html" title="Bundler::Thor::Shell::Color (class)">Color</a></span>, <span class='object_link'><a href="Shell/HTML.html" title="Bundler::Thor::Shell::HTML (class)">HTML</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="SHELL_DELEGATED_METHODS-constant" class="">SHELL_DELEGATED_METHODS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:ask</span><span class='comma'>,</span> <span class='symbol'>:error</span><span class='comma'>,</span> <span class='symbol'>:set_color</span><span class='comma'>,</span> <span class='symbol'>:yes?</span><span class='comma'>,</span> <span class='symbol'>:no?</span><span class='comma'>,</span> <span class='symbol'>:say</span><span class='comma'>,</span> <span class='symbol'>:say_status</span><span class='comma'>,</span> <span class='symbol'>:print_in_columns</span><span class='comma'>,</span> <span class='symbol'>:print_table</span><span class='comma'>,</span> <span class='symbol'>:print_wrapped</span><span class='comma'>,</span> <span class='symbol'>:file_collision</span><span class='comma'>,</span> <span class='symbol'>:terminal_width</span><span class='rbracket'>]</span></pre></dd>
+    
+  </dl>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shell-instance_method" title="#shell (instance method)">#<strong>shell</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Holds the shell for the given Bundler::Thor instance.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(args = [], options = {}, config = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add shell to initialize config values.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_padding-instance_method" title="#with_padding (instance method)">#<strong>with_padding</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Yields the given block with padding.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="shell=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="shell-instance_method">
+  
+    #<strong>shell</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Holds the shell for the given Bundler::Thor instance. If no shell is given,
+it gets a default shell from Bundler::Thor::Base.shell.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/shell.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shell'>shell</span>
+  <span class='ivar'>@shell</span> <span class='op'>||=</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span><span class='op'>::</span><span class='const'>Base</span><span class='period'>.</span><span class='id identifier rubyid_shell'>shell</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(args = [], options = {}, config = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add shell to initialize config values.</p>
+
+<h4 id="label-Configuration">Configuration</h4>
+<dl class="rdoc-list note-list"><dt>shell&lt;Object&gt;
+<dd>
+<p>An instance of the shell to be used.</p>
+</dd></dl>
+
+<h4 id="label-Examples">Examples</h4>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>MyScript</span> <span class='op'>&lt;</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:first</span><span class='comma'>,</span> <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:numeric</span>
+<span class='kw'>end</span>
+
+<span class='const'>MyScript</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbracket'>[</span><span class='float'>1.0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:foo</span> <span class='op'>=&gt;</span> <span class='symbol'>:bar</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='symbol'>:shell</span> <span class='op'>=&gt;</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>Thor</span><span class='op'>::</span><span class='const'>Shell</span><span class='op'>::</span><span class='const'>Basic</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/shell.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_config'>config</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>super</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_shell'>shell</span> <span class='op'>=</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:shell</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_shell'>shell</span><span class='period'>.</span><span class='id identifier rubyid_base'>base</span> <span class='op'>||=</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id identifier rubyid_shell'>shell</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:base</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_padding-instance_method">
+  
+    #<strong>with_padding</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Yields the given block with padding.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/thor/lib/thor/shell.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_with_padding'>with_padding</span>
+  <span class='id identifier rubyid_shell'>shell</span><span class='period'>.</span><span class='id identifier rubyid_padding'>padding</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='kw'>yield</span>
+<span class='kw'>ensure</span>
+  <span class='id identifier rubyid_shell'>shell</span><span class='period'>.</span><span class='id identifier rubyid_padding'>padding</span> <span class='op'>-=</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat Mar 18 19:39:33 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

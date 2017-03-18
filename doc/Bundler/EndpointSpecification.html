@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Bundler::EndpointSpecification
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Bundler::EndpointSpecification";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (E)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Bundler.html" title="Bundler (module)">Bundler</a></span></span>
+     &raquo; 
+    <span class="title">EndpointSpecification</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Class: Bundler::EndpointSpecification
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Gem/Specification.html" title="Gem::Specification (class)">Gem::Specification</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Gem/Specification.html" title="Gem::Specification (class)">Gem::Specification</a></span></li>
+          
+            <li class="next">Bundler::EndpointSpecification</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="MatchPlatform.html" title="Bundler::MatchPlatform (module)">MatchPlatform</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bundler/endpoint_specification.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>used for Creating Specifications from the Gemcutter Endpoint</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="ILLFORMED_MESSAGE-constant" class="">ILLFORMED_MESSAGE =
+        
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Ill-formed requirement [&quot;#&lt;YAML::Syck::DefaultKey</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+    
+  </dl>
+
+
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="GemHelpers.html" title="Bundler::GemHelpers (module)">GemHelpers</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="GemHelpers.html#GENERICS-constant" title="Bundler::GemHelpers::GENERICS (constant)">GemHelpers::GENERICS</a></span>, <span class='object_link'><a href="GemHelpers.html#GENERIC_CACHE-constant" title="Bundler::GemHelpers::GENERIC_CACHE (constant)">GemHelpers::GENERIC_CACHE</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#checksum-instance_method" title="#checksum (instance method)">#<strong>checksum</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute checksum.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dependencies-instance_method" title="#dependencies (instance method)">#<strong>dependencies</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute dependencies.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#platform-instance_method" title="#platform (instance method)">#<strong>platform</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute platform.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remote-instance_method" title="#remote (instance method)">#<strong>remote</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute remote.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#required_ruby_version-instance_method" title="#required_ruby_version (instance method)">#<strong>required_ruby_version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute required_ruby_version.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#required_rubygems_version-instance_method" title="#required_rubygems_version (instance method)">#<strong>required_rubygems_version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute required_rubygems_version.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#source-instance_method" title="#source (instance method)">#<strong>source</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute source.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#version-instance_method" title="#version (instance method)">#<strong>version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute version.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Gem/Specification.html" title="Gem::Specification (class)">Gem::Specification</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Gem/Specification.html#full_gem_path-instance_method" title="Gem::Specification#full_gem_path (method)">#full_gem_path</a></span>, <span class='object_link'><a href="../Gem/Specification.html#location-instance_method" title="Gem::Specification#location (method)">#location</a></span>, <span class='object_link'><a href="../Gem/Specification.html#relative_loaded_from-instance_method" title="Gem::Specification#relative_loaded_from (method)">#relative_loaded_from</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__swap__-instance_method" title="#__swap__ (instance method)">#<strong>__swap__</strong>(spec)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#_local_specification-instance_method" title="#_local_specification (instance method)">#<strong>_local_specification</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bindir-instance_method" title="#bindir (instance method)">#<strong>bindir</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>needed for bundle clean.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#executables-instance_method" title="#executables (instance method)">#<strong>executables</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>needed for binstubs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extensions-instance_method" title="#extensions (instance method)">#<strong>extensions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>needed for “with native extensions” during install.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fetch_platform-instance_method" title="#fetch_platform (instance method)">#<strong>fetch_platform</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(name, version, platform, dependencies, metadata = nil)  &#x21d2; EndpointSpecification </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of EndpointSpecification.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_paths-instance_method" title="#load_paths (instance method)">#<strong>load_paths</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>needed for inline.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#post_install_message-instance_method" title="#post_install_message (instance method)">#<strong>post_install_message</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>needed for post_install_messages during install.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#require_paths-instance_method" title="#require_paths (instance method)">#<strong>require_paths</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>needed for standalone, load required_paths from local gemspec after the gem
+is installed.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="MatchPlatform.html" title="Bundler::MatchPlatform (module)">MatchPlatform</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="MatchPlatform.html#match_platform-instance_method" title="Bundler::MatchPlatform#match_platform (method)">#match_platform</a></span>, <span class='object_link'><a href="MatchPlatform.html#platforms_match%3F-class_method" title="Bundler::MatchPlatform.platforms_match? (method)">platforms_match?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="GemHelpers.html" title="Bundler::GemHelpers (module)">GemHelpers</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="GemHelpers.html#generic-class_method" title="Bundler::GemHelpers.generic (method)">generic</a></span>, <span class='object_link'><a href="GemHelpers.html#generic_local_platform-class_method" title="Bundler::GemHelpers.generic_local_platform (method)">generic_local_platform</a></span>, <span class='object_link'><a href="GemHelpers.html#platform_specificity_match-class_method" title="Bundler::GemHelpers.platform_specificity_match (method)">platform_specificity_match</a></span>, <span class='object_link'><a href="GemHelpers.html#select_best_platform_match-class_method" title="Bundler::GemHelpers.select_best_platform_match (method)">select_best_platform_match</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Gem/Specification.html" title="Gem::Specification (class)">Gem::Specification</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Gem/Specification.html#extension_dir-instance_method" title="Gem::Specification#extension_dir (method)">#extension_dir</a></span>, <span class='object_link'><a href="../Gem/Specification.html#gem_dir-instance_method" title="Gem::Specification#gem_dir (method)">#gem_dir</a></span>, <span class='object_link'><a href="../Gem/Specification.html#git_version-instance_method" title="Gem::Specification#git_version (method)">#git_version</a></span>, <span class='object_link'><a href="../Gem/Specification.html#groups-instance_method" title="Gem::Specification#groups (method)">#groups</a></span>, <span class='object_link'><a href="../Gem/Specification.html#loaded_from-instance_method" title="Gem::Specification#loaded_from (method)">#loaded_from</a></span>, <span class='object_link'><a href="../Gem/Specification.html#nondevelopment_dependencies-instance_method" title="Gem::Specification#nondevelopment_dependencies (method)">#nondevelopment_dependencies</a></span>, <span class='object_link'><a href="../Gem/Specification.html#rg_extension_dir-instance_method" title="Gem::Specification#rg_extension_dir (method)">#rg_extension_dir</a></span>, <span class='object_link'><a href="../Gem/Specification.html#rg_full_gem_path-instance_method" title="Gem::Specification#rg_full_gem_path (method)">#rg_full_gem_path</a></span>, <span class='object_link'><a href="../Gem/Specification.html#rg_loaded_from-instance_method" title="Gem::Specification#rg_loaded_from (method)">#rg_loaded_from</a></span>, <span class='object_link'><a href="../Gem/Specification.html#to_gemfile-instance_method" title="Gem::Specification#to_gemfile (method)">#to_gemfile</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(name, version, platform, dependencies, metadata = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="Bundler::EndpointSpecification (class)">EndpointSpecification</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of EndpointSpecification</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span><span class='comma'>,</span> <span class='id identifier rubyid_platform'>platform</span><span class='comma'>,</span> <span class='id identifier rubyid_dependencies'>dependencies</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@name</span>         <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@version</span>      <span class='op'>=</span> <span class='const'>Gem</span><span class='op'>::</span><span class='const'>Version</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span> <span class='id identifier rubyid_version'>version</span>
+  <span class='ivar'>@platform</span>     <span class='op'>=</span> <span class='id identifier rubyid_platform'>platform</span>
+  <span class='ivar'>@dependencies</span> <span class='op'>=</span> <span class='id identifier rubyid_dependencies'>dependencies</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_dep'>dep</span><span class='comma'>,</span> <span class='id identifier rubyid_reqs'>reqs</span><span class='op'>|</span> <span class='id identifier rubyid_build_dependency'>build_dependency</span><span class='lparen'>(</span><span class='id identifier rubyid_dep'>dep</span><span class='comma'>,</span> <span class='id identifier rubyid_reqs'>reqs</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_parse_metadata'>parse_metadata</span><span class='lparen'>(</span><span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="checksum-instance_method">
+  
+    #<strong>checksum</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute checksum</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_checksum'>checksum</span>
+  <span class='ivar'>@checksum</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="dependencies-instance_method">
+  
+    #<strong>dependencies</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute dependencies</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dependencies'>dependencies</span>
+  <span class='ivar'>@dependencies</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="platform-instance_method">
+  
+    #<strong>platform</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute platform</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_platform'>platform</span>
+  <span class='ivar'>@platform</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="remote=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="remote-instance_method">
+  
+    #<strong>remote</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute remote</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remote'>remote</span>
+  <span class='ivar'>@remote</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="required_ruby_version-instance_method">
+  
+    #<strong>required_ruby_version</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute required_ruby_version</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_required_ruby_version'>required_ruby_version</span>
+  <span class='ivar'>@required_ruby_version</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="required_rubygems_version-instance_method">
+  
+    #<strong>required_rubygems_version</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute required_rubygems_version</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_required_rubygems_version'>required_rubygems_version</span>
+  <span class='ivar'>@required_rubygems_version</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="source=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="source-instance_method">
+  
+    #<strong>source</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute source</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_source'>source</span>
+  <span class='ivar'>@source</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="version-instance_method">
+  
+    #<strong>version</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute version</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
+  <span class='ivar'>@version</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="__swap__-instance_method">
+  
+    #<strong>__swap__</strong>(spec)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid___swap__'>__swap__</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_without_type'>without_type</span> <span class='op'>=</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_d'>d</span><span class='op'>|</span> <span class='const'>Gem</span><span class='op'>::</span><span class='const'>Dependency</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_d'>d</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_d'>d</span><span class='period'>.</span><span class='id identifier rubyid_requirements_list'>requirements_list</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_extra_deps'>extra_deps</span> <span class='op'>=</span> <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_runtime_dependencies'>runtime_dependencies</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_without_type'>without_type</span><span class='rparen'>)</span><span class='period'>.</span><span class='op'>-</span><span class='lparen'>(</span><span class='id identifier rubyid_dependencies'>dependencies</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_without_type'>without_type</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_extra_deps'>extra_deps</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+    <span class='const'>Bundler</span><span class='period'>.</span><span class='id identifier rubyid_ui'>ui</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_full_name'>full_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_remote'>remote</span><span class='embexpr_end'>}</span><span class='tstring_content'> has corrupted API dependencies (API returned </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dependencies'>dependencies</span><span class='embexpr_end'>}</span><span class='tstring_content'>, real spec has (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_runtime_dependencies'>runtime_dependencies</span><span class='embexpr_end'>}</span><span class='tstring_content'>))</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>APIResponseMismatchError</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Downloading </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_full_name'>full_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> revealed dependencies not in the API (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_extra_deps'>extra_deps</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> \
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nInstalling with `--full-index` should fix the problem.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@remote_specification</span> <span class='op'>=</span> <span class='id identifier rubyid_spec'>spec</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="_local_specification-instance_method">
+  
+    #<strong>_local_specification</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid__local_specification'>_local_specification</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='ivar'>@loaded_from</span> <span class='op'>&amp;&amp;</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='id identifier rubyid_local_specification_path'>local_specification_path</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_local_specification_path'>local_specification_path</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_spec'>spec</span><span class='op'>|</span>
+    <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_loaded_from'>loaded_from</span> <span class='op'>=</span> <span class='ivar'>@loaded_from</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bindir-instance_method">
+  
+    #<strong>bindir</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>needed for bundle clean</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bindir'>bindir</span>
+  <span class='kw'>if</span> <span class='ivar'>@remote_specification</span>
+    <span class='ivar'>@remote_specification</span><span class='period'>.</span><span class='id identifier rubyid_bindir'>bindir</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid__local_specification'>_local_specification</span>
+    <span class='id identifier rubyid__local_specification'>_local_specification</span><span class='period'>.</span><span class='id identifier rubyid_bindir'>bindir</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="executables-instance_method">
+  
+    #<strong>executables</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>needed for binstubs</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_executables'>executables</span>
+  <span class='kw'>if</span> <span class='ivar'>@remote_specification</span>
+    <span class='ivar'>@remote_specification</span><span class='period'>.</span><span class='id identifier rubyid_executables'>executables</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid__local_specification'>_local_specification</span>
+    <span class='id identifier rubyid__local_specification'>_local_specification</span><span class='period'>.</span><span class='id identifier rubyid_executables'>executables</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extensions-instance_method">
+  
+    #<strong>extensions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>needed for “with native extensions” during install</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_extensions'>extensions</span>
+  <span class='kw'>if</span> <span class='ivar'>@remote_specification</span>
+    <span class='ivar'>@remote_specification</span><span class='period'>.</span><span class='id identifier rubyid_extensions'>extensions</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid__local_specification'>_local_specification</span>
+    <span class='id identifier rubyid__local_specification'>_local_specification</span><span class='period'>.</span><span class='id identifier rubyid_extensions'>extensions</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fetch_platform-instance_method">
+  
+    #<strong>fetch_platform</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fetch_platform'>fetch_platform</span>
+  <span class='ivar'>@platform</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_paths-instance_method">
+  
+    #<strong>load_paths</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>needed for inline</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_paths'>load_paths</span>
+  <span class='comment'># remote specs aren&#39;t installed, and can&#39;t have load_paths
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid__local_specification'>_local_specification</span>
+    <span class='id identifier rubyid__local_specification'>_local_specification</span><span class='period'>.</span><span class='id identifier rubyid_load_paths'>load_paths</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="post_install_message-instance_method">
+  
+    #<strong>post_install_message</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>needed for post_install_messages during install</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_post_install_message'>post_install_message</span>
+  <span class='kw'>if</span> <span class='ivar'>@remote_specification</span>
+    <span class='ivar'>@remote_specification</span><span class='period'>.</span><span class='id identifier rubyid_post_install_message'>post_install_message</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid__local_specification'>_local_specification</span>
+    <span class='id identifier rubyid__local_specification'>_local_specification</span><span class='period'>.</span><span class='id identifier rubyid_post_install_message'>post_install_message</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="require_paths-instance_method">
+  
+    #<strong>require_paths</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>needed for standalone, load required_paths from local gemspec after the gem
+is installed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/endpoint_specification.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_require_paths'>require_paths</span>
+  <span class='kw'>if</span> <span class='ivar'>@remote_specification</span>
+    <span class='ivar'>@remote_specification</span><span class='period'>.</span><span class='id identifier rubyid_require_paths'>require_paths</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid__local_specification'>_local_specification</span>
+    <span class='id identifier rubyid__local_specification'>_local_specification</span><span class='period'>.</span><span class='id identifier rubyid_require_paths'>require_paths</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat Mar 18 19:39:44 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

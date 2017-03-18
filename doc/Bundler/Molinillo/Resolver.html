@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Bundler::Molinillo::Resolver
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Bundler::Molinillo::Resolver";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Bundler.html" title="Bundler (module)">Bundler</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Molinillo.html" title="Bundler::Molinillo (module)">Molinillo</a></span></span>
+     &raquo; 
+    <span class="title">Resolver</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../../class_list.html"></iframe>
+
+      <div id="content"><h1>Class: Bundler::Molinillo::Resolver
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Bundler::Molinillo::Resolver</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bundler/vendor/molinillo/lib/molinillo/resolver.rb<span class="defines">,<br />
+  lib/bundler/vendor/molinillo/lib/molinillo/resolution.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This class encapsulates a dependency resolver. The resolver is responsible
+for determining which set of dependencies to activate, with feedback from
+the <span class='object_link'><a href="#specification_provider-instance_method" title="Bundler::Molinillo::Resolver#specification_provider (method)">#specification_provider</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Resolver/Resolution.html" title="Bundler::Molinillo::Resolver::Resolution (class)">Resolution</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolver_ui-instance_method" title="#resolver_ui (instance method)">#<strong>resolver_ui</strong>  &#x21d2; UI </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The UI module used to communicate back to the user during the resolution
+process.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#specification_provider-instance_method" title="#specification_provider (instance method)">#<strong>specification_provider</strong>  &#x21d2; SpecificationProvider </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The specification provider used in the resolution process.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(specification_provider, resolver_ui)  &#x21d2; Resolver </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes a new resolver.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolve-instance_method" title="#resolve (instance method)">#<strong>resolve</strong>(requested, base = DependencyGraph.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Resolves the requested dependencies into a <span class='object_link'><a href="DependencyGraph.html" title="Bundler::Molinillo::DependencyGraph (class)">DependencyGraph</a></span>, locking to
+the base dependency graph (if specified).</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(specification_provider, resolver_ui)  &#x21d2; <tt><span class='object_link'><a href="" title="Bundler::Molinillo::Resolver (class)">Resolver</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Initializes a new resolver.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>specification_provider</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="SpecificationProvider.html" title="Bundler::Molinillo::SpecificationProvider (module)">SpecificationProvider</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>see <span class='object_link'><a href="#specification_provider-instance_method" title="Bundler::Molinillo::Resolver#specification_provider (method)">#specification_provider</a></span></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>resolver_ui</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="UI.html" title="Bundler::Molinillo::UI (module)">UI</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>see <span class='object_link'><a href="#resolver_ui-instance_method" title="Bundler::Molinillo::Resolver#resolver_ui (method)">#resolver_ui</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/molinillo/lib/molinillo/resolver.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_specification_provider'>specification_provider</span><span class='comma'>,</span> <span class='id identifier rubyid_resolver_ui'>resolver_ui</span><span class='rparen'>)</span>
+  <span class='ivar'>@specification_provider</span> <span class='op'>=</span> <span class='id identifier rubyid_specification_provider'>specification_provider</span>
+  <span class='ivar'>@resolver_ui</span> <span class='op'>=</span> <span class='id identifier rubyid_resolver_ui'>resolver_ui</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="resolver_ui-instance_method">
+  
+    #<strong>resolver_ui</strong>  &#x21d2; <tt><span class='object_link'><a href="UI.html" title="Bundler::Molinillo::UI (module)">UI</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the UI module used to communicate back to the user during the
+resolution process</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="UI.html" title="Bundler::Molinillo::UI (module)">UI</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the UI module used to communicate back to the user during the resolution
+process</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/molinillo/lib/molinillo/resolver.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolver_ui'>resolver_ui</span>
+  <span class='ivar'>@resolver_ui</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="specification_provider-instance_method">
+  
+    #<strong>specification_provider</strong>  &#x21d2; <tt><span class='object_link'><a href="SpecificationProvider.html" title="Bundler::Molinillo::SpecificationProvider (module)">SpecificationProvider</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the specification provider used in the resolution process</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="SpecificationProvider.html" title="Bundler::Molinillo::SpecificationProvider (module)">SpecificationProvider</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the specification provider used in the resolution process</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/molinillo/lib/molinillo/resolver.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_specification_provider'>specification_provider</span>
+  <span class='ivar'>@specification_provider</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="resolve-instance_method">
+  
+    #<strong>resolve</strong>(requested, base = DependencyGraph.new)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Resolves the requested dependencies into a <span class='object_link'><a href="DependencyGraph.html" title="Bundler::Molinillo::DependencyGraph (class)">DependencyGraph</a></span>, locking to
+the base dependency graph (if specified)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>requested</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an array of &#39;requested&#39; dependencies that the
+<span class='object_link'><a href="#specification_provider-instance_method" title="Bundler::Molinillo::Resolver#specification_provider (method)">#specification_provider</a></span> can understand</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>base</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="DependencyGraph.html" title="Bundler::Molinillo::DependencyGraph (class)">DependencyGraph</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>DependencyGraph.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the base dependency graph to which dependencies should be &#39;locked&#39;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bundler/vendor/molinillo/lib/molinillo/resolver.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolve'>resolve</span><span class='lparen'>(</span><span class='id identifier rubyid_requested'>requested</span><span class='comma'>,</span> <span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='const'>DependencyGraph</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+  <span class='const'>Resolution</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_specification_provider'>specification_provider</span><span class='comma'>,</span>
+                 <span class='id identifier rubyid_resolver_ui'>resolver_ui</span><span class='comma'>,</span>
+                 <span class='id identifier rubyid_requested'>requested</span><span class='comma'>,</span>
+                 <span class='id identifier rubyid_base'>base</span><span class='rparen'>)</span><span class='period'>.</span>
+    <span class='id identifier rubyid_resolve'>resolve</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat Mar 18 19:39:46 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.3.0).
+</div>
+
+    </div>
+  </body>
+</html>
